@@ -1,0 +1,169 @@
+<!-- ##### SECTION Title ##### -->
+PhatFanSlider
+
+<!-- ##### SECTION Short_Description ##### -->
+a base class for #PhatHFanSlider and #PhatVFanSlider
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+The #PhatFanSlider widget family provides a slider widget for
+retrieving floating point values from the user.  The cool thing about
+fansliders is that the user can have a great amount of precision in a
+very small space.  After depressing the left mouse button on a
+fanslider, the user can then drag the pointer away from the widget,
+causing a "fan" to popup which indicates the new scale they are
+working with.  The farther out the pointer is drawn, the greater the
+size of the fan and the level of precision.
+</para>
+
+<para>
+The fansliders work like most other numerical entry widgets; if you
+know how to use a #GtkSpinbutton, you know how to use a
+#PhatFanSlider.  If not, check out the <ulink
+url="http://www.gtk.org/tutorial/"> GTK+-2.0 tutorial.</ulink>
+</para>
+
+<para>
+You can change the colors that a given fanslider uses.  Fansliders
+use widget->style->base_gc[GTK_STATE_SELECTED] for the foreground color,
+and widget->style->dark_gc[GTK_STATE_NORMAL] for the background color.
+Adjusting these elements of the widget's style will change the way
+the fanslider draws.
+</para>
+
+<para>
+#PhatFanSlider is an abstract base class, from which #PhatHFanSlider and
+#PhatVFanSlider are derived.  To create a new fanslider, call either
+phat_vfanslider_new() or phat_hfanslider_new().
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+#PhatHFanSlider and #PhatVFanSlider to create instances of #PhatFanSlider.
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT PhatFanSlider ##### -->
+<para>
+The #PhatFanSlider-struct struct contains private data only, and
+should be accessed using the functions below.
+</para>
+
+
+<!-- ##### SIGNAL PhatFanSlider::changed ##### -->
+<para>
+
+</para>
+
+@phatfanslider: the object which received the signal.
+
+<!-- ##### SIGNAL PhatFanSlider::value-changed ##### -->
+<para>
+
+</para>
+
+@phatfanslider: the object which received the signal.
+
+<!-- ##### FUNCTION phat_fan_slider_set_value ##### -->
+<para>
+
+</para>
+
+@slider: 
+@value: 
+
+
+<!-- ##### FUNCTION phat_fan_slider_set_log ##### -->
+<para>
+
+</para>
+
+@slider: 
+@is_log: 
+
+
+<!-- ##### FUNCTION phat_fan_slider_is_log ##### -->
+<para>
+
+</para>
+
+@slider: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_fan_slider_get_value ##### -->
+<para>
+
+</para>
+
+@slider: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_fan_slider_set_range ##### -->
+<para>
+
+</para>
+
+@slider: 
+@lower: 
+@upper: 
+
+
+<!-- ##### FUNCTION phat_fan_slider_get_range ##### -->
+<para>
+
+</para>
+
+@slider: 
+@lower: 
+@upper: 
+
+
+<!-- ##### FUNCTION phat_fan_slider_set_adjustment ##### -->
+<para>
+
+</para>
+
+@slider: 
+@adjustment: 
+
+
+<!-- ##### FUNCTION phat_fan_slider_get_adjustment ##### -->
+<para>
+
+</para>
+
+@slider: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_fan_slider_set_inverted ##### -->
+<para>
+
+</para>
+
+@slider: 
+@inverted: 
+
+
+<!-- ##### FUNCTION phat_fan_slider_get_inverted ##### -->
+<para>
+
+</para>
+
+@slider: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_fan_slider_set_default_value ##### -->
+<para>
+
+</para>
+
+@slider: 
+@value: 
+
+

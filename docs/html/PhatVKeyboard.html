@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>PhatVKeyboard</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.70.1">
+<link rel="start" href="index.html" title="PHAT Reference Manual">
+<link rel="up" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+<link rel="prev" href="PhatHFanSlider.html" title="PhatHFanSlider">
+<link rel="next" href="phat-PhatKnob.html" title="PhatKnob">
+<meta name="generator" content="GTK-Doc V1.7 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="phat.html" title="Part&#160;I.&#160;PHAT Overview">
+<link rel="part" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="PhatHFanSlider.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="phatwidgets.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">PHAT Reference Manual</th>
+<td><a accesskey="n" href="phat-PhatKnob.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id348972" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id322981" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id346292" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id322960" class="shortcut">Implemented Interfaces</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="PhatVKeyboard"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id348972"></a><span class="refentrytitle">PhatVKeyboard</span>
+</h2>
+<p>PhatVKeyboard &#8212; a vertical keyboard widget</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+            <a href="PhatVKeyboard.html#PhatVKeyboard-struct">PhatVKeyboard</a>;
+<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  <a href="PhatVKeyboard.html#phat-vkeyboard-new">phat_vkeyboard_new</a>              (<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment,
+                                             int numkeys,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> show_labels);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id346292"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  <a
+href="../gobject/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="../gobject/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="../gtk/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="../gtk/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="../gtk/GtkBin.html"
+>GtkBin</a>
+                                 +----<a
+href="../gtk/GtkViewport.html"
+>GtkViewport</a>
+                                       +----<a href="PhatKeyboard.html" title="PhatKeyboard">PhatKeyboard</a>
+                                             +----PhatVKeyboard
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id322960"></a><h2>Implemented Interfaces</h2>
+<p>
+PhatVKeyboard implements
+ AtkImplementorIface.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id322981"></a><h2>Description</h2>
+<p>
+<a href="PhatVKeyboard.html" title="PhatVKeyboard"><span class="type">PhatVKeyboard</span></a> is a wrapper for the abstract <a href="PhatKeyboard.html" title="PhatKeyboard"><span class="type">PhatKeyboard</span></a> class.
+After creating a <a href="PhatVKeyboard.html" title="PhatVKeyboard"><span class="type">PhatVKeyboard</span></a>, you should interact with it using the
+<a href="PhatKeyboard.html" title="PhatKeyboard"><span class="type">PhatKeyboard</span></a> functions.
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id323024"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id323035"></a><h3>
+<a name="PhatVKeyboard-struct"></a>PhatVKeyboard</h3>
+<a class="indexterm" name="id317299"></a><pre class="programlisting">typedef struct _PhatVKeyboard PhatVKeyboard;</pre>
+<p>
+The <a href="PhatVKeyboard.html#PhatVKeyboard-struct"><span class="type">PhatVKeyboard</span></a> struct contains private data only, and
+should be accessed using the functions below.
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id317321"></a><h3>
+<a name="phat-vkeyboard-new"></a>phat_vkeyboard_new ()</h3>
+<a class="indexterm" name="id317333"></a><pre class="programlisting"><a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  phat_vkeyboard_new              (<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment,
+                                             int numkeys,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> show_labels);</pre>
+<p>
+Creates a new <a href="PhatVKeyboard.html" title="PhatVKeyboard"><span class="type">PhatVKeyboard</span></a>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>adjustment</code></em>&#160;:</span></td>
+<td> the <a
+href="../gtk/GtkAdjustment.html"
+><span class="type">GtkAdjustment</span></a> that the new keyboard will use for scrolling
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>numkeys</code></em>&#160;:</span></td>
+<td> number of keys to create
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>show_labels</code></em>&#160;:</span></td>
+<td> whether to label the C keys
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> a newly created <a href="PhatVKeyboard.html" title="PhatVKeyboard"><span class="type">PhatVKeyboard</span></a>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id322284"></a><h2>See Also</h2>
+<p>
+<a href="PhatKeyboard.html" title="PhatKeyboard"><span class="type">PhatKeyboard</span></a> provides functions for interacting with <a href="PhatVKeyboard.html" title="PhatVKeyboard"><span class="type">PhatVKeyboard</span></a> widgets.
+</p>
+</div>
+</div>
+</body>
+</html>

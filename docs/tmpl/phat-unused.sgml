@@ -1,0 +1,153 @@
+<!-- ##### SECTION ./tmpl/phat.sgml:Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/phat.sgml:See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/phat.sgml:Short_Description ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/phat.sgml:Stability_Level ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/phat.sgml:Title ##### -->
+phat
+
+
+<!-- ##### SIGNAL PhatFanslider::changed ##### -->
+<para>
+
+</para>
+
+@phatfanslider: the object which received the signal.
+
+<!-- ##### SIGNAL PhatFanslider::value-changed ##### -->
+<para>
+
+</para>
+
+@phatfanslider: the object which received the signal.
+
+<!-- ##### STRUCT PhatFansliderClass ##### -->
+<para>
+
+</para>
+
+@parent_class: 
+@value_changed: 
+@changed: 
+
+<!-- ##### MACRO debug ##### -->
+<para>
+
+</para>
+
+@...:
+
+
+<!-- ##### FUNCTION phat_fanslider_get_adjustment ##### -->
+<para>
+
+</para>
+
+@slider: 
+@Returns: 
+
+<!-- ##### FUNCTION phat_fanslider_get_range ##### -->
+<para>
+
+</para>
+
+@slider: 
+@lower: 
+@upper: 
+
+<!-- ##### FUNCTION phat_fanslider_get_value ##### -->
+<para>
+
+</para>
+
+@slider: 
+@Returns: 
+
+<!-- ##### FUNCTION phat_fanslider_set_adjustment ##### -->
+<para>
+
+</para>
+
+@slider: 
+@adjustment: 
+
+<!-- ##### FUNCTION phat_fanslider_set_range ##### -->
+<para>
+
+</para>
+
+@slider: 
+@lower: 
+@upper: 
+
+<!-- ##### FUNCTION phat_fanslider_set_value ##### -->
+<para>
+
+</para>
+
+@slider: 
+@value: 
+
+<!-- ##### FUNCTION phat_hfanslider_new ##### -->
+<para>
+
+</para>
+
+@adjustment: 
+@Returns: 
+
+<!-- ##### FUNCTION phat_hfanslider_new_with_range ##### -->
+<para>
+
+</para>
+
+@value: 
+@lower: 
+@upper: 
+@Returns: 
+@val: 
+
+<!-- ##### FUNCTION phat_vfanslider_new ##### -->
+<para>
+
+</para>
+
+@adjustment: 
+@Returns: 
+
+<!-- ##### FUNCTION phat_vfanslider_new_with_range ##### -->
+<para>
+
+</para>
+
+@value: 
+@lower: 
+@upper: 
+@Returns: 
+@val: 
+
+<!-- ##### FUNCTION phat_warp_pointer ##### -->
+<para>
+
+</para>
+
+@xsrc: 
+@ysrc: 
+@xdest: 
+@ydest: 
+

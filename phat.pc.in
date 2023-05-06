@@ -1,0 +1,11 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+ 
+Name: phat
+Description: the Phat Audio Toolkit, a collection of GTK+ GUI elements geared toward audio applications
+Requires: gtk+-2.0 libgnomecanvas-2.0
+Version: @PHAT_VERSION@
+Libs: -L${libdir} -lphat
+Cflags: -I${includedir}

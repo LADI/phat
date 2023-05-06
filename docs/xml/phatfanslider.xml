@@ -1,0 +1,373 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="PhatFanSlider">
+<refmeta>
+<refentrytitle role="top_of_page">PhatFanSlider</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>PHAT Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>PhatFanSlider</refname>
+<refpurpose>a base class for <link linkend="PhatHFanSlider"><type>PhatHFanSlider</type></link> and <link linkend="PhatVFanSlider"><type>PhatVFanSlider</type></link></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+
+
+            <link linkend="PhatFanSlider-struct">PhatFanSlider</link>;
+<link linkend="void">void</link>        <link linkend="phat-fan-slider-set-value">phat_fan_slider_set_value</link>       (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="double">double</link> value);
+<link linkend="void">void</link>        <link linkend="phat-fan-slider-set-log">phat_fan_slider_set_log</link>         (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="gboolean">gboolean</link> is_log);
+<link linkend="gboolean">gboolean</link>    <link linkend="phat-fan-slider-is-log">phat_fan_slider_is_log</link>          (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider);
+<link linkend="double">double</link>      <link linkend="phat-fan-slider-get-value">phat_fan_slider_get_value</link>       (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider);
+<link linkend="void">void</link>        <link linkend="phat-fan-slider-set-range">phat_fan_slider_set_range</link>       (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="double">double</link> lower,
+                                             <link linkend="double">double</link> upper);
+<link linkend="void">void</link>        <link linkend="phat-fan-slider-get-range">phat_fan_slider_get_range</link>       (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="double">double</link> *lower,
+                                             <link linkend="double">double</link> *upper);
+<link linkend="void">void</link>        <link linkend="phat-fan-slider-set-adjustment">phat_fan_slider_set_adjustment</link>  (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment);
+<link linkend="GtkAdjustment">GtkAdjustment</link>* <link linkend="phat-fan-slider-get-adjustment">phat_fan_slider_get_adjustment</link>
+                                            (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider);
+<link linkend="void">void</link>        <link linkend="phat-fan-slider-set-inverted">phat_fan_slider_set_inverted</link>    (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="gboolean">gboolean</link> inverted);
+<link linkend="gboolean">gboolean</link>    <link linkend="phat-fan-slider-get-inverted">phat_fan_slider_get_inverted</link>    (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider);
+<link linkend="void">void</link>        <link linkend="phat-fan-slider-set-default-value">phat_fan_slider_set_default_value</link>
+                                            (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="gdouble">gdouble</link> value);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----PhatFanSlider
+                           +----<link linkend="PhatVFanSlider">PhatVFanSlider</link>
+                           +----<link linkend="PhatHFanSlider">PhatHFanSlider</link>
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+PhatFanSlider implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link>.</para>
+
+</refsect1>
+
+
+
+<refsect1 role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+
+&quot;<link linkend="PhatFanSlider-changed">changed</link>&quot;   <link linkend="void">void</link>        user_function      (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                            <link linkend="gpointer">gpointer</link>       user_data)      : Run first / Action
+&quot;<link linkend="PhatFanSlider-value-changed">value-changed</link>&quot;
+            <link linkend="void">void</link>        user_function      (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                            <link linkend="gpointer">gpointer</link>       user_data)      : Run first / Action
+</synopsis>
+</refsect1>
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+The <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link> widget family provides a slider widget for
+retrieving floating point values from the user.  The cool thing about
+fansliders is that the user can have a great amount of precision in a
+very small space.  After depressing the left mouse button on a
+fanslider, the user can then drag the pointer away from the widget,
+causing a "fan" to popup which indicates the new scale they are
+working with.  The farther out the pointer is drawn, the greater the
+size of the fan and the level of precision.
+</para>
+
+<para>
+The fansliders work like most other numerical entry widgets; if you
+know how to use a <link linkend="GtkSpinbutton"><type>GtkSpinbutton</type></link>, you know how to use a
+<link linkend="PhatFanSlider"><type>PhatFanSlider</type></link>.  If not, check out the <ulink
+url="http://www.gtk.org/tutorial/"> GTK+-2.0 tutorial.</ulink>
+</para>
+
+<para>
+You can change the colors that a given fanslider uses.  Fansliders
+use widget->style->base_gc[GTK_STATE_SELECTED] for the foreground color,
+and widget->style->dark_gc[GTK_STATE_NORMAL] for the background color.
+Adjusting these elements of the widget's style will change the way
+the fanslider draws.
+</para>
+
+<para>
+<link linkend="PhatFanSlider"><type>PhatFanSlider</type></link> is an abstract base class, from which <link linkend="PhatHFanSlider"><type>PhatHFanSlider</type></link> and
+<link linkend="PhatVFanSlider"><type>PhatVFanSlider</type></link> are derived.  To create a new fanslider, call either
+<link linkend="phat-vfanslider-new"><function>phat_vfanslider_new()</function></link> or <link linkend="phat-hfanslider-new"><function>phat_hfanslider_new()</function></link>.
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="PhatFanSlider-struct" role="struct"/>PhatFanSlider</title>
+<indexterm><primary>PhatFanSlider</primary></indexterm><programlisting>typedef struct _PhatFanSlider PhatFanSlider;</programlisting>
+<para>
+The <link linkend="PhatFanSlider-struct"><type>PhatFanSlider</type></link> struct contains private data only, and
+should be accessed using the functions below.
+</para></refsect2>
+<refsect2>
+<title><anchor id="phat-fan-slider-set-value" role="function"/>phat_fan_slider_set_value ()</title>
+<indexterm><primary>phat_fan_slider_set_value</primary></indexterm><programlisting><link linkend="void">void</link>        phat_fan_slider_set_value       (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="double">double</link> value);</programlisting>
+<para>
+Sets the current value of the slider.  If the value is outside the
+range of values allowed by <parameter>slider</parameter>, it will be clamped to fit
+within them.  The slider emits the "value-changed" signal if the
+value changes.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>slider</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><simpara> a new value for the slider
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-fan-slider-set-log" role="function"/>phat_fan_slider_set_log ()</title>
+<indexterm><primary>phat_fan_slider_set_log</primary></indexterm><programlisting><link linkend="void">void</link>        phat_fan_slider_set_log         (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="gboolean">gboolean</link> is_log);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>slider</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>is_log</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-fan-slider-is-log" role="function"/>phat_fan_slider_is_log ()</title>
+<indexterm><primary>phat_fan_slider_is_log</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>    phat_fan_slider_is_log          (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>slider</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-fan-slider-get-value" role="function"/>phat_fan_slider_get_value ()</title>
+<indexterm><primary>phat_fan_slider_get_value</primary></indexterm><programlisting><link linkend="double">double</link>      phat_fan_slider_get_value       (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider);</programlisting>
+<para>
+Retrieves the current value of the slider.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>slider</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> current value of the slider.
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-fan-slider-set-range" role="function"/>phat_fan_slider_set_range ()</title>
+<indexterm><primary>phat_fan_slider_set_range</primary></indexterm><programlisting><link linkend="void">void</link>        phat_fan_slider_set_range       (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="double">double</link> lower,
+                                             <link linkend="double">double</link> upper);</programlisting>
+<para>
+Sets the range of allowable values for the slider, and  clamps the slider's
+current value to be between <parameter>lower</parameter> and <parameter>upper</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>slider</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>lower</parameter>&nbsp;:</term>
+<listitem><simpara> lowest allowable value
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>upper</parameter>&nbsp;:</term>
+<listitem><simpara> highest allowable value
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-fan-slider-get-range" role="function"/>phat_fan_slider_get_range ()</title>
+<indexterm><primary>phat_fan_slider_get_range</primary></indexterm><programlisting><link linkend="void">void</link>        phat_fan_slider_get_range       (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="double">double</link> *lower,
+                                             <link linkend="double">double</link> *upper);</programlisting>
+<para>
+Places the range of allowable values for <parameter>slider</parameter> into <parameter>lower</parameter>
+and <parameter>upper</parameter>.  Either variable may be set to <link linkend="NULL:CAPS"><literal>NULL</literal></link> if you are not
+interested in its value.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>slider</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>lower</parameter>&nbsp;:</term>
+<listitem><simpara> retrieves lowest allowable value
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>upper</parameter>&nbsp;:</term>
+<listitem><simpara> retrieves highest allowable value
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-fan-slider-set-adjustment" role="function"/>phat_fan_slider_set_adjustment ()</title>
+<indexterm><primary>phat_fan_slider_set_adjustment</primary></indexterm><programlisting><link linkend="void">void</link>        phat_fan_slider_set_adjustment  (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment);</programlisting>
+<para>
+Sets the adjustment used by <parameter>slider</parameter>.  Every <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link> uses an
+adjustment to store its current value and its range of allowable
+values.  If <parameter>adjustment</parameter> is <link linkend="NULL:CAPS"><literal>NULL</literal></link>, a new adjustment with a value of
+zero and a range of [-1.0, 1.0] will be created.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>slider</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>adjustment</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="GtkAdjustment"><type>GtkAdjustment</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-fan-slider-get-adjustment" role="function"/>phat_fan_slider_get_adjustment ()</title>
+<indexterm><primary>phat_fan_slider_get_adjustment</primary></indexterm><programlisting><link linkend="GtkAdjustment">GtkAdjustment</link>* phat_fan_slider_get_adjustment
+                                            (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider);</programlisting>
+<para>
+Retrives the current adjustment in use by <parameter>slider</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>slider</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> <parameter>slider</parameter>'s current <link linkend="GtkAdjustment"><type>GtkAdjustment</type></link>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-fan-slider-set-inverted" role="function"/>phat_fan_slider_set_inverted ()</title>
+<indexterm><primary>phat_fan_slider_set_inverted</primary></indexterm><programlisting><link linkend="void">void</link>        phat_fan_slider_set_inverted    (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="gboolean">gboolean</link> inverted);</programlisting>
+<para>
+Sets in which direction the fanslider should draw increasing
+values.  By default, horizontal fansliders draw low to high from
+left to right, and vertical fansliders draw from bottom to top.
+You can reverse this behavior by setting <parameter>inverted</parameter> to <link linkend="TRUE:CAPS"><literal>TRUE</literal></link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>slider</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>inverted</parameter>&nbsp;:</term>
+<listitem><simpara> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> to invert the fanslider
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-fan-slider-get-inverted" role="function"/>phat_fan_slider_get_inverted ()</title>
+<indexterm><primary>phat_fan_slider_get_inverted</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>    phat_fan_slider_get_inverted    (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider);</programlisting>
+<para>
+Determines whether <parameter>slider</parameter> is inverted or not.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>slider</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if <parameter>slider</parameter> is inverted
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-fan-slider-set-default-value" role="function"/>phat_fan_slider_set_default_value ()</title>
+<indexterm><primary>phat_fan_slider_set_default_value</primary></indexterm><programlisting><link linkend="void">void</link>        phat_fan_slider_set_default_value
+                                            (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                             <link linkend="gdouble">gdouble</link> value);</programlisting>
+<para>
+Set default value of the slider. Slider is reset to this value
+when middle mouse button is pressed.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>slider</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><simpara> the default value
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+<refsect1 role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2><title><anchor id="PhatFanSlider-changed"/>The &quot;changed&quot; signal</title>
+<indexterm><primary>PhatFanSlider::changed</primary></indexterm><programlisting><link linkend="void">void</link>        user_function                  (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                            <link linkend="gpointer">gpointer</link>       user_data)      : Run first / Action</programlisting>
+<para>
+The "changed" signal is emitted when any parameter of the
+slider's adjustment changes, except for the <link linkend="value"><literal>value</literal></link> parameter.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>slider</parameter>&nbsp;:</term>
+<listitem><simpara> the object on which the signal was emitted
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="PhatFanSlider-value-changed"/>The &quot;value-changed&quot; signal</title>
+<indexterm><primary>PhatFanSlider::value-changed</primary></indexterm><programlisting><link linkend="void">void</link>        user_function                  (<link linkend="PhatFanSlider">PhatFanSlider</link> *slider,
+                                            <link linkend="gpointer">gpointer</link>       user_data)      : Run first / Action</programlisting>
+<para>
+The "value-changed" signal is emitted when the value of the
+slider's adjustment changes.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>slider</parameter>&nbsp;:</term>
+<listitem><simpara> the object on which the signal was emitted
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+
+<refsect1>
+<title>See Also</title>
+<para>
+<link linkend="PhatHFanSlider"><type>PhatHFanSlider</type></link> and <link linkend="PhatVFanSlider"><type>PhatVFanSlider</type></link> to create instances of <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link>.
+</para>
+</refsect1>
+
+</refentry>

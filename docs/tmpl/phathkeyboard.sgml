@@ -1,0 +1,39 @@
+<!-- ##### SECTION Title ##### -->
+PhatHKeyboard
+
+<!-- ##### SECTION Short_Description ##### -->
+a horizontal keyboard widget
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+#PhatHKeyboard is a wrapper for the abstract #PhatKeyboard class.
+After creating a #PhatHKeyboard, you should interact with it using the
+#PhatKeyboard functions.
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+#PhatKeyboard provides functions for interacting with #PhatHKeyboard widgets.
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT PhatHKeyboard ##### -->
+<para>
+The #PhatHKeyboard-struct struct contains private data only, and
+should be accessed using the functions below.
+</para>
+
+
+<!-- ##### FUNCTION phat_hkeyboard_new ##### -->
+<para>
+
+</para>
+
+@adjustment: 
+@numkeys: 
+@show_labels: 
+@Returns: 
+
+

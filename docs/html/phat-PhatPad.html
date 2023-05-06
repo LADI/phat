@@ -1,0 +1,762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>PhatPad</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.70.1">
+<link rel="start" href="index.html" title="PHAT Reference Manual">
+<link rel="up" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+<link rel="prev" href="PhatKeyboard.html" title="PhatKeyboard">
+<link rel="next" href="PhatFanSlider.html" title="PhatFanSlider">
+<meta name="generator" content="GTK-Doc V1.7 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="phat.html" title="Part&#160;I.&#160;PHAT Overview">
+<link rel="part" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="PhatKeyboard.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="phatwidgets.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">PHAT Reference Manual</th>
+<td><a accesskey="n" href="PhatFanSlider.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id344956" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id320869" class="shortcut">Description</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="phat-PhatPad"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id344956"></a><span class="refentrytitle">PhatPad</span>
+</h2>
+<p>PhatPad &#8212; </p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+            <a href="phat-PhatPad.html#PhatPad">PhatPad</a>;
+<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  <a href="phat-PhatPad.html#phat-pad-new">phat_pad_new</a>                    ();
+<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* <a href="phat-PhatPad.html#phat-pad-get-ytilt">phat_pad_get_ytilt</a>           (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);
+<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* <a href="phat-PhatPad.html#phat-pad-get-xtilt">phat_pad_get_xtilt</a>           (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);
+<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* <a href="phat-PhatPad.html#phat-pad-get-pressure">phat_pad_get_pressure</a>        (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);
+<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* <a href="phat-PhatPad.html#phat-pad-get-y">phat_pad_get_y</a>               (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);
+<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* <a href="phat-PhatPad.html#phat-pad-get-x">phat_pad_get_x</a>               (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);
+void        <a href="phat-PhatPad.html#phat-pad-set-x-range">phat_pad_set_x_range</a>            (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> min,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> max);
+void        <a href="phat-PhatPad.html#phat-pad-set-y-range">phat_pad_set_y_range</a>            (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> min,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> max);
+void        <a href="phat-PhatPad.html#phat-pad-set-pressure-range">phat_pad_set_pressure_range</a>     (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> min,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> max);
+void        <a href="phat-PhatPad.html#phat-pad-set-x-log">phat_pad_set_x_log</a>              (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);
+void        <a href="phat-PhatPad.html#phat-pad-set-y-log">phat_pad_set_y_log</a>              (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);
+void        <a href="phat-PhatPad.html#phat-pad-set-xtilt-log">phat_pad_set_xtilt_log</a>          (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);
+void        <a href="phat-PhatPad.html#phat-pad-set-ytilt-log">phat_pad_set_ytilt_log</a>          (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);
+void        <a href="phat-PhatPad.html#phat-pad-set-pressure-log">phat_pad_set_pressure_log</a>       (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);
+<a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    <a href="phat-PhatPad.html#phat-pad-x-is-log">phat_pad_x_is_log</a>               (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);
+<a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    <a href="phat-PhatPad.html#phat-pad-y-is-log">phat_pad_y_is_log</a>               (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);
+<a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    <a href="phat-PhatPad.html#phat-pad-xtilt-is-log">phat_pad_xtilt_is_log</a>           (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);
+<a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    <a href="phat-PhatPad.html#phat-pad-ytilt-is-log">phat_pad_ytilt_is_log</a>           (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);
+<a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    <a href="phat-PhatPad.html#phat-pad-pressure-is-log">phat_pad_pressure_is_log</a>        (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id320869"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id320884"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id320895"></a><h3>
+<a name="PhatPad"></a>PhatPad</h3>
+<a class="indexterm" name="id320907"></a><pre class="programlisting">typedef struct {
+    GtkDrawingArea parent; 
+    GdkPixmap* pixmap;
+    GtkAdjustment* pressure;
+    gboolean p_is_log;
+    GtkAdjustment* xtilt;
+    gboolean xt_is_log;
+    GtkAdjustment* ytilt;
+    gboolean yt_is_log;
+    GtkAdjustment* x;
+    gboolean x_is_log;
+    GtkAdjustment* y;
+    gboolean y_is_log;
+} PhatPad;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id320925"></a><h3>
+<a name="phat-pad-new"></a>phat_pad_new ()</h3>
+<a class="indexterm" name="id320937"></a><pre class="programlisting"><a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  phat_pad_new                    ();</pre>
+<p>
+Creates a new <a href="phat-PhatPad.html#PhatPad"><span class="type">PhatPad</span></a>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> a newly created <a href="phat-PhatPad.html#PhatPad"><span class="type">PhatPad</span></a>
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id320990"></a><h3>
+<a name="phat-pad-get-ytilt"></a>phat_pad_get_ytilt ()</h3>
+<a class="indexterm" name="id321002"></a><pre class="programlisting"><a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* phat_pad_get_ytilt           (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);</pre>
+<p>
+Retrieves the current ytilt value of the pad.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td> a <a href="phat-PhatPad.html#PhatPad"><span class="type">PhatPad</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> current ytilt value.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id362142"></a><h3>
+<a name="phat-pad-get-xtilt"></a>phat_pad_get_xtilt ()</h3>
+<a class="indexterm" name="id362152"></a><pre class="programlisting"><a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* phat_pad_get_xtilt           (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);</pre>
+<p>
+Retrieves the current xtilt value of the pad.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td> a <a href="phat-PhatPad.html#PhatPad"><span class="type">PhatPad</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> current xtilt value.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id362216"></a><h3>
+<a name="phat-pad-get-pressure"></a>phat_pad_get_pressure ()</h3>
+<a class="indexterm" name="id362228"></a><pre class="programlisting"><a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* phat_pad_get_pressure        (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);</pre>
+<p>
+Retrieves the current pressure value of the pad.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td> a <a href="phat-PhatPad.html#PhatPad"><span class="type">PhatPad</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> current pressure value.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id362294"></a><h3>
+<a name="phat-pad-get-y"></a>phat_pad_get_y ()</h3>
+<a class="indexterm" name="id362306"></a><pre class="programlisting"><a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* phat_pad_get_y               (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);</pre>
+<p>
+Retrieves the current y value of the pad.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td> a <a href="phat-PhatPad.html#PhatPad"><span class="type">PhatPad</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> current y value.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id362373"></a><h3>
+<a name="phat-pad-get-x"></a>phat_pad_get_x ()</h3>
+<a class="indexterm" name="id362385"></a><pre class="programlisting"><a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* phat_pad_get_x               (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);</pre>
+<p>
+Retrieves the current x value of the pad.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td> a <a href="phat-PhatPad.html#PhatPad"><span class="type">PhatPad</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> current x value.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id362451"></a><h3>
+<a name="phat-pad-set-x-range"></a>phat_pad_set_x_range ()</h3>
+<a class="indexterm" name="id362463"></a><pre class="programlisting">void        phat_pad_set_x_range            (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> min,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> max);</pre>
+<p>
+Sets the x range of the pad.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td> a <a href="phat-PhatPad.html#PhatPad"><span class="type">PhatPad</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>min</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>max</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id362532"></a><h3>
+<a name="phat-pad-set-y-range"></a>phat_pad_set_y_range ()</h3>
+<a class="indexterm" name="id362543"></a><pre class="programlisting">void        phat_pad_set_y_range            (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> min,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> max);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>min</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>max</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id362618"></a><h3>
+<a name="phat-pad-set-pressure-range"></a>phat_pad_set_pressure_range ()</h3>
+<a class="indexterm" name="id362628"></a><pre class="programlisting">void        phat_pad_set_pressure_range     (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> min,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> max);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>min</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>max</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id362704"></a><h3>
+<a name="phat-pad-set-x-log"></a>phat_pad_set_x_log ()</h3>
+<a class="indexterm" name="id362714"></a><pre class="programlisting">void        phat_pad_set_x_log              (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>is_log</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id362772"></a><h3>
+<a name="phat-pad-set-y-log"></a>phat_pad_set_y_log ()</h3>
+<a class="indexterm" name="id362782"></a><pre class="programlisting">void        phat_pad_set_y_log              (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>is_log</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id362840"></a><h3>
+<a name="phat-pad-set-xtilt-log"></a>phat_pad_set_xtilt_log ()</h3>
+<a class="indexterm" name="id362850"></a><pre class="programlisting">void        phat_pad_set_xtilt_log          (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>is_log</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id362908"></a><h3>
+<a name="phat-pad-set-ytilt-log"></a>phat_pad_set_ytilt_log ()</h3>
+<a class="indexterm" name="id362918"></a><pre class="programlisting">void        phat_pad_set_ytilt_log          (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>is_log</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id362976"></a><h3>
+<a name="phat-pad-set-pressure-log"></a>phat_pad_set_pressure_log ()</h3>
+<a class="indexterm" name="id362986"></a><pre class="programlisting">void        phat_pad_set_pressure_log       (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>is_log</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id363044"></a><h3>
+<a name="phat-pad-x-is-log"></a>phat_pad_x_is_log ()</h3>
+<a class="indexterm" name="id363054"></a><pre class="programlisting"><a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    phat_pad_x_is_log               (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id363104"></a><h3>
+<a name="phat-pad-y-is-log"></a>phat_pad_y_is_log ()</h3>
+<a class="indexterm" name="id363114"></a><pre class="programlisting"><a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    phat_pad_y_is_log               (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id363163"></a><h3>
+<a name="phat-pad-xtilt-is-log"></a>phat_pad_xtilt_is_log ()</h3>
+<a class="indexterm" name="id363174"></a><pre class="programlisting"><a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    phat_pad_xtilt_is_log           (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id363223"></a><h3>
+<a name="phat-pad-ytilt-is-log"></a>phat_pad_ytilt_is_log ()</h3>
+<a class="indexterm" name="id363234"></a><pre class="programlisting"><a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    phat_pad_ytilt_is_log           (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id363283"></a><h3>
+<a name="phat-pad-pressure-is-log"></a>phat_pad_pressure_is_log ()</h3>
+<a class="indexterm" name="id363293"></a><pre class="programlisting"><a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    phat_pad_pressure_is_log        (<a href="phat-PhatPad.html#PhatPad">PhatPad</a> *pad);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>pad</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

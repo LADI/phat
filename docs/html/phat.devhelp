@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="PHAT Reference Manual" link="index.html" author="" name="phat">
+  <chapters>
+    <sub name="PHAT Overview" link="phat.html">
+      <sub name="" link="install.html"/>
+      <sub name="" link="use.html"/>
+    </sub>
+    <sub name="PHAT Widgets" link="phatwidgets.html">
+      <sub name="PhatSliderButton" link="PhatSliderButton.html"/>
+      <sub name="PhatHFanSlider" link="PhatHFanSlider.html"/>
+      <sub name="PhatVKeyboard" link="PhatVKeyboard.html"/>
+      <sub name="PhatKnob" link="phat-PhatKnob.html"/>
+      <sub name="PhatVFanSlider" link="PhatVFanSlider.html"/>
+      <sub name="PhatKeyboard" link="PhatKeyboard.html"/>
+      <sub name="PhatPad" link="phat-PhatPad.html"/>
+      <sub name="PhatFanSlider" link="PhatFanSlider.html"/>
+      <sub name="PhatHKeyboard" link="PhatHKeyboard.html"/>
+    </sub>
+  </chapters>
+  <functions>
+    <function name="PhatSliderButton" link="PhatSliderButton.html#PhatSliderButton-struct"/>
+    <function name="phat_slider_button_new ()" link="PhatSliderButton.html#phat-slider-button-new"/>
+    <function name="phat_slider_button_new_with_range ()" link="PhatSliderButton.html#phat-slider-button-new-with-range"/>
+    <function name="phat_slider_button_set_value ()" link="PhatSliderButton.html#phat-slider-button-set-value"/>
+    <function name="phat_slider_button_get_value ()" link="PhatSliderButton.html#phat-slider-button-get-value"/>
+    <function name="phat_slider_button_set_range ()" link="PhatSliderButton.html#phat-slider-button-set-range"/>
+    <function name="phat_slider_button_get_range ()" link="PhatSliderButton.html#phat-slider-button-get-range"/>
+    <function name="phat_slider_button_set_adjustment ()" link="PhatSliderButton.html#phat-slider-button-set-adjustment"/>
+    <function name="phat_slider_button_get_adjustment ()" link="PhatSliderButton.html#phat-slider-button-get-adjustment"/>
+    <function name="phat_slider_button_set_increment ()" link="PhatSliderButton.html#phat-slider-button-set-increment"/>
+    <function name="phat_slider_button_get_increment ()" link="PhatSliderButton.html#phat-slider-button-get-increment"/>
+    <function name="phat_slider_button_set_format ()" link="PhatSliderButton.html#phat-slider-button-set-format"/>
+    <function name="phat_slider_button_get_format ()" link="PhatSliderButton.html#phat-slider-button-get-format"/>
+    <function name="phat_slider_button_set_threshold ()" link="PhatSliderButton.html#phat-slider-button-set-threshold"/>
+    <function name="phat_slider_button_get_threshold ()" link="PhatSliderButton.html#phat-slider-button-get-threshold"/>
+    <function name="The &quot;changed&quot; signal" link="PhatSliderButton.html#PhatSliderButton-changed"/>
+    <function name="The &quot;value-changed&quot; signal" link="PhatSliderButton.html#PhatSliderButton-value-changed"/>
+    <function name="PhatHFanSlider" link="PhatHFanSlider.html#PhatHFanSlider-struct"/>
+    <function name="phat_hfan_slider_new ()" link="PhatHFanSlider.html#phat-hfan-slider-new"/>
+    <function name="phat_hfan_slider_new_with_range ()" link="PhatHFanSlider.html#phat-hfan-slider-new-with-range"/>
+    <function name="PhatVKeyboard" link="PhatVKeyboard.html#PhatVKeyboard-struct"/>
+    <function name="phat_vkeyboard_new ()" link="PhatVKeyboard.html#phat-vkeyboard-new"/>
+    <function name="PhatKnob" link="phat-PhatKnob.html#PhatKnob"/>
+    <function name="phat_knob_new ()" link="phat-PhatKnob.html#phat-knob-new"/>
+    <function name="phat_knob_new_with_range ()" link="phat-PhatKnob.html#phat-knob-new-with-range"/>
+    <function name="phat_knob_get_adjustment ()" link="phat-PhatKnob.html#phat-knob-get-adjustment"/>
+    <function name="phat_knob_get_value ()" link="phat-PhatKnob.html#phat-knob-get-value"/>
+    <function name="phat_knob_set_value ()" link="phat-PhatKnob.html#phat-knob-set-value"/>
+    <function name="phat_knob_set_range ()" link="phat-PhatKnob.html#phat-knob-set-range"/>
+    <function name="phat_knob_set_update_policy ()" link="phat-PhatKnob.html#phat-knob-set-update-policy"/>
+    <function name="phat_knob_set_adjustment ()" link="phat-PhatKnob.html#phat-knob-set-adjustment"/>
+    <function name="phat_knob_set_log ()" link="phat-PhatKnob.html#phat-knob-set-log"/>
+    <function name="phat_knob_is_log ()" link="phat-PhatKnob.html#phat-knob-is-log"/>
+    <function name="PhatVFanSlider" link="PhatVFanSlider.html#PhatVFanSlider-struct"/>
+    <function name="phat_vfan_slider_new ()" link="PhatVFanSlider.html#phat-vfan-slider-new"/>
+    <function name="phat_vfan_slider_new_with_range ()" link="PhatVFanSlider.html#phat-vfan-slider-new-with-range"/>
+    <function name="_Key" link="PhatKeyboard.html#Key"/>
+    <function name="PhatKeyboard" link="PhatKeyboard.html#PhatKeyboard-struct"/>
+    <function name="phat_keyboard_get_adjustment ()" link="PhatKeyboard.html#phat-keyboard-get-adjustment"/>
+    <function name="phat_keyboard_set_adjustment ()" link="PhatKeyboard.html#phat-keyboard-set-adjustment"/>
+    <function name="The &quot;numkeys&quot; property" link="PhatKeyboard.html#PhatKeyboard--numkeys"/>
+    <function name="The &quot;orientation&quot; property" link="PhatKeyboard.html#PhatKeyboard--orientation"/>
+    <function name="The &quot;show-labels&quot; property" link="PhatKeyboard.html#PhatKeyboard--show-labels"/>
+    <function name="The &quot;key-pressed&quot; signal" link="PhatKeyboard.html#PhatKeyboard-key-pressed"/>
+    <function name="The &quot;key-released&quot; signal" link="PhatKeyboard.html#PhatKeyboard-key-released"/>
+    <function name="PhatPad" link="phat-PhatPad.html#PhatPad"/>
+    <function name="phat_pad_new ()" link="phat-PhatPad.html#phat-pad-new"/>
+    <function name="phat_pad_get_ytilt ()" link="phat-PhatPad.html#phat-pad-get-ytilt"/>
+    <function name="phat_pad_get_xtilt ()" link="phat-PhatPad.html#phat-pad-get-xtilt"/>
+    <function name="phat_pad_get_pressure ()" link="phat-PhatPad.html#phat-pad-get-pressure"/>
+    <function name="phat_pad_get_y ()" link="phat-PhatPad.html#phat-pad-get-y"/>
+    <function name="phat_pad_get_x ()" link="phat-PhatPad.html#phat-pad-get-x"/>
+    <function name="phat_pad_set_x_range ()" link="phat-PhatPad.html#phat-pad-set-x-range"/>
+    <function name="phat_pad_set_y_range ()" link="phat-PhatPad.html#phat-pad-set-y-range"/>
+    <function name="phat_pad_set_pressure_range ()" link="phat-PhatPad.html#phat-pad-set-pressure-range"/>
+    <function name="phat_pad_set_x_log ()" link="phat-PhatPad.html#phat-pad-set-x-log"/>
+    <function name="phat_pad_set_y_log ()" link="phat-PhatPad.html#phat-pad-set-y-log"/>
+    <function name="phat_pad_set_xtilt_log ()" link="phat-PhatPad.html#phat-pad-set-xtilt-log"/>
+    <function name="phat_pad_set_ytilt_log ()" link="phat-PhatPad.html#phat-pad-set-ytilt-log"/>
+    <function name="phat_pad_set_pressure_log ()" link="phat-PhatPad.html#phat-pad-set-pressure-log"/>
+    <function name="phat_pad_x_is_log ()" link="phat-PhatPad.html#phat-pad-x-is-log"/>
+    <function name="phat_pad_y_is_log ()" link="phat-PhatPad.html#phat-pad-y-is-log"/>
+    <function name="phat_pad_xtilt_is_log ()" link="phat-PhatPad.html#phat-pad-xtilt-is-log"/>
+    <function name="phat_pad_ytilt_is_log ()" link="phat-PhatPad.html#phat-pad-ytilt-is-log"/>
+    <function name="phat_pad_pressure_is_log ()" link="phat-PhatPad.html#phat-pad-pressure-is-log"/>
+    <function name="PhatFanSlider" link="PhatFanSlider.html#PhatFanSlider-struct"/>
+    <function name="phat_fan_slider_set_value ()" link="PhatFanSlider.html#phat-fan-slider-set-value"/>
+    <function name="phat_fan_slider_set_log ()" link="PhatFanSlider.html#phat-fan-slider-set-log"/>
+    <function name="phat_fan_slider_is_log ()" link="PhatFanSlider.html#phat-fan-slider-is-log"/>
+    <function name="phat_fan_slider_get_value ()" link="PhatFanSlider.html#phat-fan-slider-get-value"/>
+    <function name="phat_fan_slider_set_range ()" link="PhatFanSlider.html#phat-fan-slider-set-range"/>
+    <function name="phat_fan_slider_get_range ()" link="PhatFanSlider.html#phat-fan-slider-get-range"/>
+    <function name="phat_fan_slider_set_adjustment ()" link="PhatFanSlider.html#phat-fan-slider-set-adjustment"/>
+    <function name="phat_fan_slider_get_adjustment ()" link="PhatFanSlider.html#phat-fan-slider-get-adjustment"/>
+    <function name="phat_fan_slider_set_inverted ()" link="PhatFanSlider.html#phat-fan-slider-set-inverted"/>
+    <function name="phat_fan_slider_get_inverted ()" link="PhatFanSlider.html#phat-fan-slider-get-inverted"/>
+    <function name="phat_fan_slider_set_default_value ()" link="PhatFanSlider.html#phat-fan-slider-set-default-value"/>
+    <function name="The &quot;changed&quot; signal" link="PhatFanSlider.html#PhatFanSlider-changed"/>
+    <function name="The &quot;value-changed&quot; signal" link="PhatFanSlider.html#PhatFanSlider-value-changed"/>
+    <function name="PhatHKeyboard" link="PhatHKeyboard.html#PhatHKeyboard-struct"/>
+    <function name="phat_hkeyboard_new ()" link="PhatHKeyboard.html#phat-hkeyboard-new"/>
+  </functions>
+</book>

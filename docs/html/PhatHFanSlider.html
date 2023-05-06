@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>PhatHFanSlider</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.70.1">
+<link rel="start" href="index.html" title="PHAT Reference Manual">
+<link rel="up" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+<link rel="prev" href="PhatSliderButton.html" title="PhatSliderButton">
+<link rel="next" href="PhatVKeyboard.html" title="PhatVKeyboard">
+<meta name="generator" content="GTK-Doc V1.7 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="phat.html" title="Part&#160;I.&#160;PHAT Overview">
+<link rel="part" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="PhatSliderButton.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="phatwidgets.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">PHAT Reference Manual</th>
+<td><a accesskey="n" href="PhatVKeyboard.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id347036" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id335812" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id338205" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id335791" class="shortcut">Implemented Interfaces</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="PhatHFanSlider"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id347036"></a><span class="refentrytitle">PhatHFanSlider</span>
+</h2>
+<p>PhatHFanSlider &#8212; a horizontal fanslider widget for selecting a floating point value from a range</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+            <a href="PhatHFanSlider.html#PhatHFanSlider-struct">PhatHFanSlider</a>;
+<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  <a href="PhatHFanSlider.html#phat-hfan-slider-new">phat_hfan_slider_new</a>            (<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment);
+<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  <a href="PhatHFanSlider.html#phat-hfan-slider-new-with-range">phat_hfan_slider_new_with_range</a> (double value,
+                                             double lower,
+                                             double upper,
+                                             double step);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id338205"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  <a
+href="../gobject/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="../gobject/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="../gtk/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a>
+                           +----PhatHFanSlider
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id335791"></a><h2>Implemented Interfaces</h2>
+<p>
+PhatHFanSlider implements
+ AtkImplementorIface.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id335812"></a><h2>Description</h2>
+<p>
+<a href="PhatHFanSlider.html" title="PhatHFanSlider"><span class="type">PhatHFanSlider</span></a> is a wrapper class for the abstract base
+<a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a> class.  After creating a <a href="PhatHFanSlider.html" title="PhatHFanSlider"><span class="type">PhatHFanSlider</span></a>, you should
+interact with it using the <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a> functions.
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id335856"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id351820"></a><h3>
+<a name="PhatHFanSlider-struct"></a>PhatHFanSlider</h3>
+<a class="indexterm" name="id351832"></a><pre class="programlisting">typedef struct _PhatHFanSlider PhatHFanSlider;</pre>
+<p>
+The <a href="PhatHFanSlider.html#PhatHFanSlider-struct"><span class="type">PhatHFanSlider</span></a> struct contains private data only, and
+should be accessed using the functions below.
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id351854"></a><h3>
+<a name="phat-hfan-slider-new"></a>phat_hfan_slider_new ()</h3>
+<a class="indexterm" name="id351866"></a><pre class="programlisting"><a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  phat_hfan_slider_new            (<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment);</pre>
+<p>
+Creates a new <a href="PhatHFanSlider.html" title="PhatHFanSlider"><span class="type">PhatHFanSlider</span></a>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>adjustment</code></em>&#160;:</span></td>
+<td> the <a
+href="../gtk/GtkAdjustment.html"
+><span class="type">GtkAdjustment</span></a> that the new slider will use
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> a newly created <a href="PhatHFanSlider.html" title="PhatHFanSlider"><span class="type">PhatHFanSlider</span></a>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id351946"></a><h3>
+<a name="phat-hfan-slider-new-with-range"></a>phat_hfan_slider_new_with_range ()</h3>
+<a class="indexterm" name="id330473"></a><pre class="programlisting"><a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  phat_hfan_slider_new_with_range (double value,
+                                             double lower,
+                                             double upper,
+                                             double step);</pre>
+<p>
+Creates a new <a href="PhatHFanSlider.html" title="PhatHFanSlider"><span class="type">PhatHFanSlider</span></a>.  The slider will create a new <a
+href="../gtk/GtkAdjustment.html"
+><span class="type">GtkAdjustment</span></a>
+from <em class="parameter"><code>value</code></em>, <em class="parameter"><code>lower</code></em>, and <em class="parameter"><code>upper</code></em>.  If these parameters represent a bogus
+configuration, the program will terminate.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>value</code></em>&#160;:</span></td>
+<td> the initial value the new slider should have
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>lower</code></em>&#160;:</span></td>
+<td> the lowest value the new slider will allow
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>upper</code></em>&#160;:</span></td>
+<td> the highest value the new slider will allow
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>step</code></em>&#160;:</span></td>
+<td> increment added or subtracted when sliding
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> a newly created <a href="PhatHFanSlider.html" title="PhatHFanSlider"><span class="type">PhatHFanSlider</span></a>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id330631"></a><h2>See Also</h2>
+<p>
+<a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a> provides functions for interacting with <a href="PhatHFanSlider.html" title="PhatHFanSlider"><span class="type">PhatHFanSlider</span></a> widgets.
+</p>
+</div>
+</div>
+</body>
+</html>

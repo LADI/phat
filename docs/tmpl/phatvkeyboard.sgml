@@ -1,0 +1,39 @@
+<!-- ##### SECTION Title ##### -->
+PhatVKeyboard
+
+<!-- ##### SECTION Short_Description ##### -->
+a vertical keyboard widget
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+#PhatVKeyboard is a wrapper for the abstract #PhatKeyboard class.
+After creating a #PhatVKeyboard, you should interact with it using the
+#PhatKeyboard functions.
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+#PhatKeyboard provides functions for interacting with #PhatVKeyboard widgets.
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT PhatVKeyboard ##### -->
+<para>
+The #PhatVKeyboard-struct struct contains private data only, and
+should be accessed using the functions below.
+</para>
+
+
+<!-- ##### FUNCTION phat_vkeyboard_new ##### -->
+<para>
+
+</para>
+
+@adjustment: 
+@numkeys: 
+@show_labels: 
+@Returns: 
+
+

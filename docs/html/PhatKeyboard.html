@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>PhatKeyboard</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.70.1">
+<link rel="start" href="index.html" title="PHAT Reference Manual">
+<link rel="up" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+<link rel="prev" href="PhatVFanSlider.html" title="PhatVFanSlider">
+<link rel="next" href="phat-PhatPad.html" title="PhatPad">
+<meta name="generator" content="GTK-Doc V1.7 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="phat.html" title="Part&#160;I.&#160;PHAT Overview">
+<link rel="part" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="PhatVFanSlider.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="phatwidgets.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">PHAT Reference Manual</th>
+<td><a accesskey="n" href="phat-PhatPad.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id318508" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id355642" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id320508" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id354221" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id354243" class="shortcut">Properties</a>
+                  &#160;|&#160;
+                  <a href="#id355566" class="shortcut">Signals</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="PhatKeyboard"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id318508"></a><span class="refentrytitle">PhatKeyboard</span>
+</h2>
+<p>PhatKeyboard &#8212; a base class for <a href="PhatHKeyboard.html" title="PhatHKeyboard"><span class="type">PhatHKeyboard</span></a> and <a href="PhatVKeyboard.html" title="PhatVKeyboard"><span class="type">PhatVKeyboard</span></a></p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+            <a href="PhatKeyboard.html#Key">_Key</a>;
+            <a href="PhatKeyboard.html#PhatKeyboard-struct">PhatKeyboard</a>;
+<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* <a href="PhatKeyboard.html#phat-keyboard-get-adjustment">phat_keyboard_get_adjustment</a> (<a href="PhatKeyboard.html" title="PhatKeyboard">PhatKeyboard</a> *keyboard);
+void        <a href="PhatKeyboard.html#phat-keyboard-set-adjustment">phat_keyboard_set_adjustment</a>    (<a href="PhatKeyboard.html" title="PhatKeyboard">PhatKeyboard</a> *keyboard,
+                                             <a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id320508"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  <a
+href="../gobject/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="../gobject/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="../gtk/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="../gtk/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="../gtk/GtkBin.html"
+>GtkBin</a>
+                                 +----<a
+href="../gtk/GtkViewport.html"
+>GtkViewport</a>
+                                       +----PhatKeyboard
+                                             +----<a href="PhatVKeyboard.html" title="PhatVKeyboard">PhatVKeyboard</a>
+                                             +----<a href="PhatHKeyboard.html" title="PhatHKeyboard">PhatHKeyboard</a>
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id354221"></a><h2>Implemented Interfaces</h2>
+<p>
+PhatKeyboard implements
+ AtkImplementorIface.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id354243"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="PhatKeyboard.html#PhatKeyboard--numkeys">numkeys</a>"              <a
+href="../glib/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write / Construct Only
+  "<a href="PhatKeyboard.html#PhatKeyboard--orientation">orientation</a>"          <a
+href="../gtk/gtk-Standard-Enumerations.html#GtkOrientation"
+>GtkOrientation</a>        : Read / Write / Construct Only
+  "<a href="PhatKeyboard.html#PhatKeyboard--show-labels">show-labels</a>"          <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id355566"></a><h2>Signals</h2>
+<pre class="synopsis">
+
+"<a href="PhatKeyboard.html#PhatKeyboard-key-pressed">key-pressed</a>"
+            void        user_function      (<a href="PhatKeyboard.html" title="PhatKeyboard">PhatKeyboard</a> *keyboard,
+                                            <a
+href="../glib/glib-Basic-Types.html#gint"
+>gint</a>          key,
+                                            <a
+href="../glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>      user_data)      : Run first / Action
+"<a href="PhatKeyboard.html#PhatKeyboard-key-released">key-released</a>"
+            void        user_function      (<a href="PhatKeyboard.html" title="PhatKeyboard">PhatKeyboard</a> *keyboard,
+                                            <a
+href="../glib/glib-Basic-Types.html#gint"
+>gint</a>          key,
+                                            <a
+href="../glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>      user_data)      : Run first / Action
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id355642"></a><h2>Description</h2>
+<p>
+The <a href="PhatKeyboard.html" title="PhatKeyboard"><span class="type">PhatKeyboard</span></a> widget family provides a simple piano-like keyboard.
+Since it is derived from <a
+href="../gtk/GtkViewport.html"
+><span class="type">GtkViewport</span></a>, it comes with the ability to
+scroll.  You don't have to worry about the values of the
+<a
+href="../gtk/GtkAdjustment.html"
+><span class="type">GtkAdjustment</span></a> it uses, just share said adjustment with a scrollbar
+and you'll be in business.
+</p>
+<p>
+<a href="PhatKeyboard.html" title="PhatKeyboard"><span class="type">PhatKeyboard</span></a> is an abstract base class, from which <a href="PhatHKeyboard.html" title="PhatHKeyboard"><span class="type">PhatHKeyboard</span></a> and
+<a href="PhatVKeyboard.html" title="PhatVKeyboard"><span class="type">PhatVKeyboard</span></a> are derived.  To create a new keyboard, call either
+<a href="PhatHKeyboard.html#phat-hkeyboard-new"><code class="function">phat_hkeyboard_new()</code></a> or <a href="PhatVKeyboard.html#phat-vkeyboard-new"><code class="function">phat_vkeyboard_new()</code></a>.
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id328992"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id329003"></a><h3>
+<a name="Key"></a>_Key</h3>
+<a class="indexterm" name="id329015"></a><pre class="programlisting">typedef struct {
+    int index;
+    PhatKeyboard* keyboard;     /* the keyboard we belong to */
+    GnomeCanvasGroup* group;    /* the group this key belongs to */
+    GnomeCanvasItem* pre;       /* prelight rectangle */
+    GnomeCanvasItem* on;        /* active (depressed) rectangle */
+    GnomeCanvasItem* shad;      /* active shadow */
+} _Key;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id329033"></a><h3>
+<a name="PhatKeyboard-struct"></a>PhatKeyboard</h3>
+<a class="indexterm" name="id329045"></a><pre class="programlisting">typedef struct _PhatKeyboard PhatKeyboard;</pre>
+<p>
+The <a href="PhatKeyboard.html#PhatKeyboard-struct"><span class="type">PhatKeyboard</span></a> struct contains private data only, and should
+be accessed using the functions below.
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id329067"></a><h3>
+<a name="phat-keyboard-get-adjustment"></a>phat_keyboard_get_adjustment ()</h3>
+<a class="indexterm" name="id329078"></a><pre class="programlisting"><a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* phat_keyboard_get_adjustment (<a href="PhatKeyboard.html" title="PhatKeyboard">PhatKeyboard</a> *keyboard);</pre>
+<p>
+Retrives the current adjustment in use by <em class="parameter"><code>keyboard</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>keyboard</code></em>&#160;:</span></td>
+<td> a <a href="PhatKeyboard.html" title="PhatKeyboard"><span class="type">PhatKeyboard</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> <em class="parameter"><code>keyboard</code></em>'s current <a
+href="../gtk/GtkAdjustment.html"
+><span class="type">GtkAdjustment</span></a>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id329163"></a><h3>
+<a name="phat-keyboard-set-adjustment"></a>phat_keyboard_set_adjustment ()</h3>
+<a class="indexterm" name="id329175"></a><pre class="programlisting">void        phat_keyboard_set_adjustment    (<a href="PhatKeyboard.html" title="PhatKeyboard">PhatKeyboard</a> *keyboard,
+                                             <a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment);</pre>
+<p>
+Sets the adjustment used by <em class="parameter"><code>keyboard</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>keyboard</code></em>&#160;:</span></td>
+<td> a <a href="PhatKeyboard.html" title="PhatKeyboard"><span class="type">PhatKeyboard</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>adjustment</code></em>&#160;:</span></td>
+<td> a <a
+href="../gtk/GtkAdjustment.html"
+><span class="type">GtkAdjustment</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id360138"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id360148"></a><h3>
+<a name="PhatKeyboard--numkeys"></a>The "<code class="literal">numkeys</code>" property</h3>
+<a class="indexterm" name="id360163"></a><pre class="programlisting">  "numkeys"              <a
+href="../glib/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write / Construct Only</pre>
+<p>How many keys this keyboard should have.</p>
+<p>Allowed values: [1,1000]</p>
+<p>Default value: 128</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id360191"></a><h3>
+<a name="PhatKeyboard--orientation"></a>The "<code class="literal">orientation</code>" property</h3>
+<a class="indexterm" name="id360206"></a><pre class="programlisting">  "orientation"          <a
+href="../gtk/gtk-Standard-Enumerations.html#GtkOrientation"
+>GtkOrientation</a>        : Read / Write / Construct Only</pre>
+<p>How the keyboard should be arranged on the screen.</p>
+<p>Default value: GTK_ORIENTATION_VERTICAL</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id360232"></a><h3>
+<a name="PhatKeyboard--show-labels"></a>The "<code class="literal">show-labels</code>" property</h3>
+<a class="indexterm" name="id360247"></a><pre class="programlisting">  "show-labels"          <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct Only</pre>
+<p>Whether C keys should be labeled or not.</p>
+<p>Default value: TRUE</p>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id360272"></a><h2>Signal Details</h2>
+<div class="refsect2" lang="en">
+<a name="id349193"></a><h3>
+<a name="PhatKeyboard-key-pressed"></a>The "key-pressed" signal</h3>
+<a class="indexterm" name="id346727"></a><pre class="programlisting">void        user_function                  (<a href="PhatKeyboard.html" title="PhatKeyboard">PhatKeyboard</a> *keyboard,
+                                            <a
+href="../glib/glib-Basic-Types.html#gint"
+>gint</a>          key,
+                                            <a
+href="../glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>      user_data)      : Run first / Action</pre>
+<p>
+The "key-pressed" signal is emitted whenever a key is pressed.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>keyboard</code></em>&#160;:</span></td>
+<td> the object on which the signal was emitted
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>key</code></em>&#160;:</span></td>
+<td> the index of the key that was pressed
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id360346"></a><h3>
+<a name="PhatKeyboard-key-released"></a>The "key-released" signal</h3>
+<a class="indexterm" name="id360353"></a><pre class="programlisting">void        user_function                  (<a href="PhatKeyboard.html" title="PhatKeyboard">PhatKeyboard</a> *keyboard,
+                                            <a
+href="../glib/glib-Basic-Types.html#gint"
+>gint</a>          key,
+                                            <a
+href="../glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>      user_data)      : Run first / Action</pre>
+<p>
+The "key-released" signal is emitted whenever a key is released.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>keyboard</code></em>&#160;:</span></td>
+<td> the object on which the signal was emitted
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>key</code></em>&#160;:</span></td>
+<td> the index of the key that was pressed
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id360435"></a><h2>See Also</h2>
+<p>
+<a href="PhatHKeyboard.html" title="PhatHKeyboard"><span class="type">PhatHKeyboard</span></a> and <a href="PhatVKeyboard.html" title="PhatVKeyboard"><span class="type">PhatVKeyboard</span></a>, to create new instances of <a href="PhatKeyboard.html" title="PhatKeyboard"><span class="type">PhatKeyboard</span></a>.
+</p>
+</div>
+</div>
+</body>
+</html>

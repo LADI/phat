@@ -1,0 +1,75 @@
+-*- text -*-
+
+++++++++++++
+INSTALLATION
+++++++++++++
+
+./configure && make && su -c "make install"
+su -
+ldconfig
+
+Make sure that you have '/usr/local/lib/' (or wherever you installed phat to)
+somewhere in /etc/ld.so.conf before running ldconfig.
+
+The custom ./configure options are:
+
+--enable-debug: turns off optimization and turns on MASSIVE amounts of
+                stderr debug info
+
+--enable-gtk-doc: builds the developer documentation and installs it
+		  to /usr/local/share/gtk-doc/html/phat by default
+
+
++++++
+DEMOS
++++++
+
+phatfanslider
+-------------
+
+* click and drag to adjust the value
+
+* drag "outside" of the widget to expose a "fan," indicating how your
+level of precision has increased
+
+* hold down the ctrl button to lock the fan
+
+* hold down shift to lock the value
+
+
+phatsliderbutton
+----------------
+
+* click and drag to adjust the value
+
+* click and release to get a textbox so you can enter a value directly
+
+* click the arrow buttons to make one adjustment in either direction
+
+
++++++
+USAGE
++++++
+
+PHAT installs a phat.pc file, so you can use pkg-config to get all the
+configuration information needed to compile PHAT apps.  To avoid
+redundancy, I didn't include the gtk+-2.0 information, so you'll have
+to check for that as well.  The following command will store all the
+necessary compilation flags into FLAGS.
+
+FLAGS = `pkg-config --libs --cflags phat gtk+-2.0`
+
+You could then build your application "foo" as follows:
+
+gcc -o foo foo.c $FLAGS
+
+
+Yeah, this is a terse README.  Feel free to fix that,
+I'm getting CTS over here.
+
+--Pete
+
+I'm now maintaining phat, please pester me instead
+
+Loki
+<loki.davison@gmail.com>

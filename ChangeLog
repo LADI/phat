@@ -1,0 +1,96 @@
+2006-03-07  Loki Davison  <loki.davison@gmail.com>
+	* phat/phatkeyboard.c: added null to varargs functions to fix missing
+	sentinel warnings.
+
+2005-07-11  Pete Bessman  <ninjadroid@gazuga.net>
+
+	* phat.spec.in (Requires): added catches for phatkeyboard files.
+
+	* phat/phatsliderbutton.c (value_to_string): removed manual digit
+	limiting code.  I have no clue why I was doing that originally, I
+	hope it wasn't for any good reason.
+
+2005-07-06  Pete Bessman  <ninjadroid@gazuga.net>
+
+	* phat/phatkeyboard.h (enum): moved key dimensions enums here so
+	that they are globally accessible.
+
+2005-07-03  Pete Bessman  <ninjadroid@gazuga.net>
+
+	* phat/phatkeyboard.c (draw_key): cleaned up drawing routine.
+	Sorta.  Lots of futt bucking bullshit going on in here, but the
+	end result works.
+
+2004-10-10  Pete Bessman  <ninjadroid@gazuga.net>
+
+	* phat.pc.in: added Requires: section
+
+	* phat/phatkeyboard.*: added keyboard widget.
+
+2004-10-09  Pete Bessman  <ninjadroid@gazuga.net>
+
+	* phat/phatsliderbutton.c: make sure digits are never greater than
+	MAXDIGITS.
+	(update_size): adjusted alignment of sliderbutton prefix and
+	postfix.
+
+2004-10-08  Pete Bessman  <ninjadroid@gazuga.net>
+
+	* phat/phatsliderbutton.c (phat_slider_button_new): allow lower
+	and upper ends of range to be equal.
+
+	Fixed problem of drag increments not equal to requested
+	increments.  Switched to a digits option, instead of a format
+	specifier.
+
+	* phat/phatsliderbutton.h: Switched to a digits option, instead of
+	a format specifier.
+
+2004-10-02  Pete Bessman  <ninjadroid@gazuga.net>
+
+	* configure.ac: PHAT_VERSION=0.2.3
+
+	* phat/phatsliderbutton.c (phat_slider_button_expose): replaced
+	"buttondefault" with NULL as hint to gtk_paint_box() call to clear
+	the box; this was causing crashes with the smooth engine because
+	we weren't deriving from a GtkButton and didn't have its border
+	properties.  That hint doesn't cause crashes when used with
+	gtk_paint_shadow() functions, so we can still get a good looking
+	button.  Should contact smooth engine maintainers and figure out
+	if this is a bug or a feature.
+
+2004-09-29  Pete Bessman  <ninjadroid@gazuga.net>
+
+	* phatsliderbutton.c, phatfanslider.c: changed tests in _set_range
+	from (lower < upper) to (lower <= upper).
+
+2004-08-15 Pete Bessman <ninjadroid@gazuga.net>
+	
+	* phatfanslider.c: added invert option and mousewheel support to
+	fansliders, now draws differently when insensitive.  Added support
+	for focus and keyboard events.
+
+	* all widgets, the cursor is now unhidden after scrolling on
+	button press
+
+	* demos have been reorganized and improved to show off new features
+	
+	* phatsliderbutton.c: added support for focus and keyboard
+	events. Hilites now painted with "button" hint instead of
+	"buttondefault" hint.
+
+	* I'm sure I did other stuff and fixed other bugs that I can't remember
+	
+	* release v0.2.0
+	
+2004-08-14 Pete Bessman <ninjadroid@gazuga.net>p
+
+	* created the sliderbuttons
+
+	* changed API naming conventions for the fansliders to mimic GTK+
+	customs
+
+2004-07-31 Pete Bessman <ninjadroid@gazuga.net>
+	
+	* initial public release, version 0.1.0
+

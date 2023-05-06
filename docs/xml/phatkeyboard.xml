@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="PhatKeyboard">
+<refmeta>
+<refentrytitle role="top_of_page">PhatKeyboard</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>PHAT Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>PhatKeyboard</refname>
+<refpurpose>a base class for <link linkend="PhatHKeyboard"><type>PhatHKeyboard</type></link> and <link linkend="PhatVKeyboard"><type>PhatVKeyboard</type></link></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+
+
+            <link linkend="Key">_Key</link>;
+            <link linkend="PhatKeyboard-struct">PhatKeyboard</link>;
+<link linkend="GtkAdjustment">GtkAdjustment</link>* <link linkend="phat-keyboard-get-adjustment">phat_keyboard_get_adjustment</link> (<link linkend="PhatKeyboard">PhatKeyboard</link> *keyboard);
+<link linkend="void">void</link>        <link linkend="phat-keyboard-set-adjustment">phat_keyboard_set_adjustment</link>    (<link linkend="PhatKeyboard">PhatKeyboard</link> *keyboard,
+                                             <link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkBin">GtkBin</link>
+                                 +----<link linkend="GtkViewport">GtkViewport</link>
+                                       +----PhatKeyboard
+                                             +----<link linkend="PhatVKeyboard">PhatVKeyboard</link>
+                                             +----<link linkend="PhatHKeyboard">PhatHKeyboard</link>
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+PhatKeyboard implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link>.</para>
+
+</refsect1>
+
+
+<refsect1 role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+
+  &quot;<link linkend="PhatKeyboard--numkeys">numkeys</link>&quot;              <link linkend="gint">gint</link>                  : Read / Write / Construct Only
+  &quot;<link linkend="PhatKeyboard--orientation">orientation</link>&quot;          <link linkend="GtkOrientation">GtkOrientation</link>        : Read / Write / Construct Only
+  &quot;<link linkend="PhatKeyboard--show-labels">show-labels</link>&quot;          <link linkend="gboolean">gboolean</link>              : Read / Write / Construct Only
+</synopsis>
+</refsect1>
+
+<refsect1 role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+
+&quot;<link linkend="PhatKeyboard-key-pressed">key-pressed</link>&quot;
+            <link linkend="void">void</link>        user_function      (<link linkend="PhatKeyboard">PhatKeyboard</link> *keyboard,
+                                            <link linkend="gint">gint</link>          key,
+                                            <link linkend="gpointer">gpointer</link>      user_data)      : Run first / Action
+&quot;<link linkend="PhatKeyboard-key-released">key-released</link>&quot;
+            <link linkend="void">void</link>        user_function      (<link linkend="PhatKeyboard">PhatKeyboard</link> *keyboard,
+                                            <link linkend="gint">gint</link>          key,
+                                            <link linkend="gpointer">gpointer</link>      user_data)      : Run first / Action
+</synopsis>
+</refsect1>
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+The <link linkend="PhatKeyboard"><type>PhatKeyboard</type></link> widget family provides a simple piano-like keyboard.
+Since it is derived from <link linkend="GtkViewport"><type>GtkViewport</type></link>, it comes with the ability to
+scroll.  You don't have to worry about the values of the
+<link linkend="GtkAdjustment"><type>GtkAdjustment</type></link> it uses, just share said adjustment with a scrollbar
+and you'll be in business.
+</para>
+
+<para>
+<link linkend="PhatKeyboard"><type>PhatKeyboard</type></link> is an abstract base class, from which <link linkend="PhatHKeyboard"><type>PhatHKeyboard</type></link> and
+<link linkend="PhatVKeyboard"><type>PhatVKeyboard</type></link> are derived.  To create a new keyboard, call either
+<link linkend="phat-hkeyboard-new"><function>phat_hkeyboard_new()</function></link> or <link linkend="phat-vkeyboard-new"><function>phat_vkeyboard_new()</function></link>.
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="Key" role="struct"/>_Key</title>
+<indexterm><primary>_Key</primary></indexterm><programlisting>typedef struct {
+    int index;
+    PhatKeyboard* keyboard;     /* the keyboard we belong to */
+    GnomeCanvasGroup* group;    /* the group this key belongs to */
+    GnomeCanvasItem* pre;       /* prelight rectangle */
+    GnomeCanvasItem* on;        /* active (depressed) rectangle */
+    GnomeCanvasItem* shad;      /* active shadow */
+} _Key;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="PhatKeyboard-struct" role="struct"/>PhatKeyboard</title>
+<indexterm><primary>PhatKeyboard</primary></indexterm><programlisting>typedef struct _PhatKeyboard PhatKeyboard;</programlisting>
+<para>
+The <link linkend="PhatKeyboard-struct"><type>PhatKeyboard</type></link> struct contains private data only, and should
+be accessed using the functions below.
+</para></refsect2>
+<refsect2>
+<title><anchor id="phat-keyboard-get-adjustment" role="function"/>phat_keyboard_get_adjustment ()</title>
+<indexterm><primary>phat_keyboard_get_adjustment</primary></indexterm><programlisting><link linkend="GtkAdjustment">GtkAdjustment</link>* phat_keyboard_get_adjustment (<link linkend="PhatKeyboard">PhatKeyboard</link> *keyboard);</programlisting>
+<para>
+Retrives the current adjustment in use by <parameter>keyboard</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>keyboard</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatKeyboard"><type>PhatKeyboard</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> <parameter>keyboard</parameter>'s current <link linkend="GtkAdjustment"><type>GtkAdjustment</type></link>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-keyboard-set-adjustment" role="function"/>phat_keyboard_set_adjustment ()</title>
+<indexterm><primary>phat_keyboard_set_adjustment</primary></indexterm><programlisting><link linkend="void">void</link>        phat_keyboard_set_adjustment    (<link linkend="PhatKeyboard">PhatKeyboard</link> *keyboard,
+                                             <link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment);</programlisting>
+<para>
+Sets the adjustment used by <parameter>keyboard</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>keyboard</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatKeyboard"><type>PhatKeyboard</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>adjustment</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="GtkAdjustment"><type>GtkAdjustment</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2><title><anchor id="PhatKeyboard--numkeys"/>The &quot;<literal>numkeys</literal>&quot; property</title>
+<indexterm><primary>PhatKeyboard:numkeys</primary></indexterm><programlisting>  &quot;numkeys&quot;              <link linkend="gint">gint</link>                  : Read / Write / Construct Only</programlisting>
+<para>How many keys this keyboard should have.</para><para>Allowed values: [1,1000]</para>
+<para>Default value: 128</para>
+</refsect2>
+<refsect2><title><anchor id="PhatKeyboard--orientation"/>The &quot;<literal>orientation</literal>&quot; property</title>
+<indexterm><primary>PhatKeyboard:orientation</primary></indexterm><programlisting>  &quot;orientation&quot;          <link linkend="GtkOrientation">GtkOrientation</link>        : Read / Write / Construct Only</programlisting>
+<para>How the keyboard should be arranged on the screen.</para><para>Default value: GTK_ORIENTATION_VERTICAL</para>
+</refsect2>
+<refsect2><title><anchor id="PhatKeyboard--show-labels"/>The &quot;<literal>show-labels</literal>&quot; property</title>
+<indexterm><primary>PhatKeyboard:show-labels</primary></indexterm><programlisting>  &quot;show-labels&quot;          <link linkend="gboolean">gboolean</link>              : Read / Write / Construct Only</programlisting>
+<para>Whether C keys should be labeled or not.</para><para>Default value: TRUE</para>
+</refsect2>
+
+</refsect1>
+
+<refsect1 role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2><title><anchor id="PhatKeyboard-key-pressed"/>The &quot;key-pressed&quot; signal</title>
+<indexterm><primary>PhatKeyboard::key-pressed</primary></indexterm><programlisting><link linkend="void">void</link>        user_function                  (<link linkend="PhatKeyboard">PhatKeyboard</link> *keyboard,
+                                            <link linkend="gint">gint</link>          key,
+                                            <link linkend="gpointer">gpointer</link>      user_data)      : Run first / Action</programlisting>
+<para>
+The "key-pressed" signal is emitted whenever a key is pressed.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>keyboard</parameter>&nbsp;:</term>
+<listitem><simpara> the object on which the signal was emitted
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><simpara> the index of the key that was pressed
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="PhatKeyboard-key-released"/>The &quot;key-released&quot; signal</title>
+<indexterm><primary>PhatKeyboard::key-released</primary></indexterm><programlisting><link linkend="void">void</link>        user_function                  (<link linkend="PhatKeyboard">PhatKeyboard</link> *keyboard,
+                                            <link linkend="gint">gint</link>          key,
+                                            <link linkend="gpointer">gpointer</link>      user_data)      : Run first / Action</programlisting>
+<para>
+The "key-released" signal is emitted whenever a key is released.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>keyboard</parameter>&nbsp;:</term>
+<listitem><simpara> the object on which the signal was emitted
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><simpara> the index of the key that was pressed
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+
+<refsect1>
+<title>See Also</title>
+<para>
+<link linkend="PhatHKeyboard"><type>PhatHKeyboard</type></link> and <link linkend="PhatVKeyboard"><type>PhatVKeyboard</type></link>, to create new instances of <link linkend="PhatKeyboard"><type>PhatKeyboard</type></link>.
+</para>
+</refsect1>
+
+</refentry>

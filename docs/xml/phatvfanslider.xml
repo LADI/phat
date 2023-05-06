@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="PhatVFanSlider">
+<refmeta>
+<refentrytitle role="top_of_page">PhatVFanSlider</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>PHAT Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>PhatVFanSlider</refname>
+<refpurpose>a vertical fanslider widget for selecting a floating point value from a range</refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+
+
+            <link linkend="PhatVFanSlider-struct">PhatVFanSlider</link>;
+<link linkend="GtkWidget">GtkWidget</link>*  <link linkend="phat-vfan-slider-new">phat_vfan_slider_new</link>            (<link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment);
+<link linkend="GtkWidget">GtkWidget</link>*  <link linkend="phat-vfan-slider-new-with-range">phat_vfan_slider_new_with_range</link> (<link linkend="double">double</link> value,
+                                             <link linkend="double">double</link> lower,
+                                             <link linkend="double">double</link> upper,
+                                             <link linkend="double">double</link> step);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="PhatFanSlider">PhatFanSlider</link>
+                           +----PhatVFanSlider
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+PhatVFanSlider implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link>.</para>
+
+</refsect1>
+
+
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+<link linkend="PhatVFanSlider"><type>PhatVFanSlider</type></link> is a wrapper class for the abstract base
+<link linkend="PhatFanSlider"><type>PhatFanSlider</type></link> class.  After creating a <link linkend="PhatVFanSlider"><type>PhatVFanSlider</type></link>, you should
+interact with it using the <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link> functions.
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="PhatVFanSlider-struct" role="struct"/>PhatVFanSlider</title>
+<indexterm><primary>PhatVFanSlider</primary></indexterm><programlisting>typedef struct _PhatVFanSlider PhatVFanSlider;</programlisting>
+<para>
+The <link linkend="PhatVFanSlider-struct"><type>PhatVFanSlider</type></link> struct contains private data only, and
+should be accessed using the functions below.
+</para></refsect2>
+<refsect2>
+<title><anchor id="phat-vfan-slider-new" role="function"/>phat_vfan_slider_new ()</title>
+<indexterm><primary>phat_vfan_slider_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*  phat_vfan_slider_new            (<link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment);</programlisting>
+<para>
+Creates a new <link linkend="PhatVFanSlider"><type>PhatVFanSlider</type></link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>adjustment</parameter>&nbsp;:</term>
+<listitem><simpara> the <link linkend="GtkAdjustment"><type>GtkAdjustment</type></link> that the new slider will use
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> a newly created <link linkend="PhatVFanSlider"><type>PhatVFanSlider</type></link>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-vfan-slider-new-with-range" role="function"/>phat_vfan_slider_new_with_range ()</title>
+<indexterm><primary>phat_vfan_slider_new_with_range</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*  phat_vfan_slider_new_with_range (<link linkend="double">double</link> value,
+                                             <link linkend="double">double</link> lower,
+                                             <link linkend="double">double</link> upper,
+                                             <link linkend="double">double</link> step);</programlisting>
+<para>
+Creates a new <link linkend="PhatVFanSlider"><type>PhatVFanSlider</type></link>.  The slider will create a new <link linkend="GtkAdjustment"><type>GtkAdjustment</type></link>
+from <parameter>value</parameter>, <parameter>lower</parameter>, and <parameter>upper</parameter>.  If these parameters represent a bogus
+configuration, the program will terminate.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><simpara> the initial value the new slider should have
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>lower</parameter>&nbsp;:</term>
+<listitem><simpara> the lowest value the new slider will allow
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>upper</parameter>&nbsp;:</term>
+<listitem><simpara> the highest value the new slider will allow
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>step</parameter>&nbsp;:</term>
+<listitem><simpara> increment added or subtracted when sliding
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> a newly created <link linkend="PhatVFanSlider"><type>PhatVFanSlider</type></link>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+<refsect1>
+<title>See Also</title>
+<para>
+<link linkend="PhatFanSlider"><type>PhatFanSlider</type></link> provides functions for interacting with <link linkend="PhatVFanSlider"><type>PhatVFanSlider</type></link> widgets.
+</para>
+</refsect1>
+
+</refentry>

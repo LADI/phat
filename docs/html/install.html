@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Installation</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.70.1">
+<link rel="start" href="index.html" title="PHAT Reference Manual">
+<link rel="up" href="phat.html" title="Part&#160;I.&#160;PHAT Overview">
+<link rel="prev" href="phat.html" title="Part&#160;I.&#160;PHAT Overview">
+<link rel="next" href="use.html" title="Usage">
+<meta name="generator" content="GTK-Doc V1.7 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="phat.html" title="Part&#160;I.&#160;PHAT Overview">
+<link rel="part" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="phat.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="phat.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">PHAT Reference Manual</th>
+<td><a accesskey="n" href="use.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry" lang="en">
+<a name="install"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>Installation</h2>
+<p>Installation &#8212; How to build and install PHAT on your system</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1" lang="en">
+<a name="id281400"></a><h2>Linux Systems</h2>
+<p>If you're familiar with standard tarball compilation and
+	installation procedures, then PHAT won't pose a problem for
+	you.  If you're not used to the tarball dance, you'll still
+	probably do just fine if you follow these instructions.</p>
+<p>Apart from having a generally sane Linux distribution
+	and build environment, you need to have <a href="http://www.gtk.org" target="_top">GTK+-2.0</a> or greater
+	installed, along with it's development files.</p>
+<p>The magic incantantations to build and install PHAT are
+	as follows:</p>
+<pre class="programlisting">
+        tar -xzvpf phat.tar.gz
+        cd phat.tar.gz
+        ./configure
+        make
+        su
+        &lt;enter root password&gt;
+        make install
+        /sbin/ldconfig
+        </pre>
+<p>Replace "phat.tar.gz" above with the actual name of the
+	package you downloaded and you should be golden.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id281564"></a><h2>Other Systems</h2>
+<p>I don't see why PHAT should fail to build on other POSIX
+	systems such as the BSDs, but I'm not supporting it either.
+	If and when that "I" becomes a "we," that policy may
+	change.</p>
+<p>If you're using Windows you're probably S.O.L., but that
+	too could change in the future (see above).</p>
+</div>
+</div>
+</body>
+</html>

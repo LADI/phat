@@ -1,0 +1,623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>PhatFanSlider</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.70.1">
+<link rel="start" href="index.html" title="PHAT Reference Manual">
+<link rel="up" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+<link rel="prev" href="phat-PhatPad.html" title="PhatPad">
+<link rel="next" href="PhatHKeyboard.html" title="PhatHKeyboard">
+<meta name="generator" content="GTK-Doc V1.7 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="phat.html" title="Part&#160;I.&#160;PHAT Overview">
+<link rel="part" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="phat-PhatPad.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="phatwidgets.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">PHAT Reference Manual</th>
+<td><a accesskey="n" href="PhatHKeyboard.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id353087" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id360828" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id326847" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id360741" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id360762" class="shortcut">Signals</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="PhatFanSlider"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id353087"></a><span class="refentrytitle">PhatFanSlider</span>
+</h2>
+<p>PhatFanSlider &#8212; a base class for <a href="PhatHFanSlider.html" title="PhatHFanSlider"><span class="type">PhatHFanSlider</span></a> and <a href="PhatVFanSlider.html" title="PhatVFanSlider"><span class="type">PhatVFanSlider</span></a></p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+            <a href="PhatFanSlider.html#PhatFanSlider-struct">PhatFanSlider</a>;
+void        <a href="PhatFanSlider.html#phat-fan-slider-set-value">phat_fan_slider_set_value</a>       (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             double value);
+void        <a href="PhatFanSlider.html#phat-fan-slider-set-log">phat_fan_slider_set_log</a>         (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);
+<a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    <a href="PhatFanSlider.html#phat-fan-slider-is-log">phat_fan_slider_is_log</a>          (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider);
+double      <a href="PhatFanSlider.html#phat-fan-slider-get-value">phat_fan_slider_get_value</a>       (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider);
+void        <a href="PhatFanSlider.html#phat-fan-slider-set-range">phat_fan_slider_set_range</a>       (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             double lower,
+                                             double upper);
+void        <a href="PhatFanSlider.html#phat-fan-slider-get-range">phat_fan_slider_get_range</a>       (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             double *lower,
+                                             double *upper);
+void        <a href="PhatFanSlider.html#phat-fan-slider-set-adjustment">phat_fan_slider_set_adjustment</a>  (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             <a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment);
+<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* <a href="PhatFanSlider.html#phat-fan-slider-get-adjustment">phat_fan_slider_get_adjustment</a>
+                                            (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider);
+void        <a href="PhatFanSlider.html#phat-fan-slider-set-inverted">phat_fan_slider_set_inverted</a>    (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> inverted);
+<a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    <a href="PhatFanSlider.html#phat-fan-slider-get-inverted">phat_fan_slider_get_inverted</a>    (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider);
+void        <a href="PhatFanSlider.html#phat-fan-slider-set-default-value">phat_fan_slider_set_default_value</a>
+                                            (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> value);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id326847"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  <a
+href="../gobject/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="../gobject/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="../gtk/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>
+                     +----PhatFanSlider
+                           +----<a href="PhatVFanSlider.html" title="PhatVFanSlider">PhatVFanSlider</a>
+                           +----<a href="PhatHFanSlider.html" title="PhatHFanSlider">PhatHFanSlider</a>
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id360741"></a><h2>Implemented Interfaces</h2>
+<p>
+PhatFanSlider implements
+ AtkImplementorIface.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id360762"></a><h2>Signals</h2>
+<pre class="synopsis">
+
+"<a href="PhatFanSlider.html#PhatFanSlider-changed">changed</a>"   void        user_function      (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                            <a
+href="../glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run first / Action
+"<a href="PhatFanSlider.html#PhatFanSlider-value-changed">value-changed</a>"
+            void        user_function      (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                            <a
+href="../glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run first / Action
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id360828"></a><h2>Description</h2>
+<p>
+The <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a> widget family provides a slider widget for
+retrieving floating point values from the user.  The cool thing about
+fansliders is that the user can have a great amount of precision in a
+very small space.  After depressing the left mouse button on a
+fanslider, the user can then drag the pointer away from the widget,
+causing a "fan" to popup which indicates the new scale they are
+working with.  The farther out the pointer is drawn, the greater the
+size of the fan and the level of precision.
+</p>
+<p>
+The fansliders work like most other numerical entry widgets; if you
+know how to use a <span class="type">GtkSpinbutton</span>, you know how to use a
+<a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a>.  If not, check out the <a href="http://www.gtk.org/tutorial/" target="_top"> GTK+-2.0 tutorial.</a>
+</p>
+<p>
+You can change the colors that a given fanslider uses.  Fansliders
+use widget-&gt;style-&gt;base_gc[GTK_STATE_SELECTED] for the foreground color,
+and widget-&gt;style-&gt;dark_gc[GTK_STATE_NORMAL] for the background color.
+Adjusting these elements of the widget's style will change the way
+the fanslider draws.
+</p>
+<p>
+<a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a> is an abstract base class, from which <a href="PhatHFanSlider.html" title="PhatHFanSlider"><span class="type">PhatHFanSlider</span></a> and
+<a href="PhatVFanSlider.html" title="PhatVFanSlider"><span class="type">PhatVFanSlider</span></a> are derived.  To create a new fanslider, call either
+<code class="function">phat_vfanslider_new()</code> or <code class="function">phat_hfanslider_new()</code>.
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id360899"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id360910"></a><h3>
+<a name="PhatFanSlider-struct"></a>PhatFanSlider</h3>
+<a class="indexterm" name="id360922"></a><pre class="programlisting">typedef struct _PhatFanSlider PhatFanSlider;</pre>
+<p>
+The <a href="PhatFanSlider.html#PhatFanSlider-struct"><span class="type">PhatFanSlider</span></a> struct contains private data only, and
+should be accessed using the functions below.
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id360945"></a><h3>
+<a name="phat-fan-slider-set-value"></a>phat_fan_slider_set_value ()</h3>
+<a class="indexterm" name="id360957"></a><pre class="programlisting">void        phat_fan_slider_set_value       (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             double value);</pre>
+<p>
+Sets the current value of the slider.  If the value is outside the
+range of values allowed by <em class="parameter"><code>slider</code></em>, it will be clamped to fit
+within them.  The slider emits the "value-changed" signal if the
+value changes.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>slider</code></em>&#160;:</span></td>
+<td> a <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>value</code></em>&#160;:</span></td>
+<td> a new value for the slider
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id364176"></a><h3>
+<a name="phat-fan-slider-set-log"></a>phat_fan_slider_set_log ()</h3>
+<a class="indexterm" name="id364186"></a><pre class="programlisting">void        phat_fan_slider_set_log         (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>slider</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>is_log</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id364244"></a><h3>
+<a name="phat-fan-slider-is-log"></a>phat_fan_slider_is_log ()</h3>
+<a class="indexterm" name="id364254"></a><pre class="programlisting"><a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    phat_fan_slider_is_log          (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>slider</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id364303"></a><h3>
+<a name="phat-fan-slider-get-value"></a>phat_fan_slider_get_value ()</h3>
+<a class="indexterm" name="id364314"></a><pre class="programlisting">double      phat_fan_slider_get_value       (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider);</pre>
+<p>
+Retrieves the current value of the slider.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>slider</code></em>&#160;:</span></td>
+<td> a <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> current value of the slider.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id364372"></a><h3>
+<a name="phat-fan-slider-set-range"></a>phat_fan_slider_set_range ()</h3>
+<a class="indexterm" name="id364383"></a><pre class="programlisting">void        phat_fan_slider_set_range       (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             double lower,
+                                             double upper);</pre>
+<p>
+Sets the range of allowable values for the slider, and  clamps the slider's
+current value to be between <em class="parameter"><code>lower</code></em> and <em class="parameter"><code>upper</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>slider</code></em>&#160;:</span></td>
+<td> a <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>lower</code></em>&#160;:</span></td>
+<td> lowest allowable value
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>upper</code></em>&#160;:</span></td>
+<td> highest allowable value
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id364479"></a><h3>
+<a name="phat-fan-slider-get-range"></a>phat_fan_slider_get_range ()</h3>
+<a class="indexterm" name="id364490"></a><pre class="programlisting">void        phat_fan_slider_get_range       (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             double *lower,
+                                             double *upper);</pre>
+<p>
+Places the range of allowable values for <em class="parameter"><code>slider</code></em> into <em class="parameter"><code>lower</code></em>
+and <em class="parameter"><code>upper</code></em>.  Either variable may be set to <a
+href="../glib/glib-Standard-Macros.html#NULL:CAPS"
+><code class="literal">NULL</code></a> if you are not
+interested in its value.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>slider</code></em>&#160;:</span></td>
+<td> a <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>lower</code></em>&#160;:</span></td>
+<td> retrieves lowest allowable value
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>upper</code></em>&#160;:</span></td>
+<td> retrieves highest allowable value
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id364598"></a><h3>
+<a name="phat-fan-slider-set-adjustment"></a>phat_fan_slider_set_adjustment ()</h3>
+<a class="indexterm" name="id364609"></a><pre class="programlisting">void        phat_fan_slider_set_adjustment  (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             <a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment);</pre>
+<p>
+Sets the adjustment used by <em class="parameter"><code>slider</code></em>.  Every <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a> uses an
+adjustment to store its current value and its range of allowable
+values.  If <em class="parameter"><code>adjustment</code></em> is <a
+href="../glib/glib-Standard-Macros.html#NULL:CAPS"
+><code class="literal">NULL</code></a>, a new adjustment with a value of
+zero and a range of [-1.0, 1.0] will be created.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>slider</code></em>&#160;:</span></td>
+<td> a <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>adjustment</code></em>&#160;:</span></td>
+<td> a <a
+href="../gtk/GtkAdjustment.html"
+><span class="type">GtkAdjustment</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id364709"></a><h3>
+<a name="phat-fan-slider-get-adjustment"></a>phat_fan_slider_get_adjustment ()</h3>
+<a class="indexterm" name="id364719"></a><pre class="programlisting"><a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* phat_fan_slider_get_adjustment
+                                            (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider);</pre>
+<p>
+Retrives the current adjustment in use by <em class="parameter"><code>slider</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>slider</code></em>&#160;:</span></td>
+<td> a <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> <em class="parameter"><code>slider</code></em>'s current <a
+href="../gtk/GtkAdjustment.html"
+><span class="type">GtkAdjustment</span></a>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id364795"></a><h3>
+<a name="phat-fan-slider-set-inverted"></a>phat_fan_slider_set_inverted ()</h3>
+<a class="indexterm" name="id364806"></a><pre class="programlisting">void        phat_fan_slider_set_inverted    (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> inverted);</pre>
+<p>
+Sets in which direction the fanslider should draw increasing
+values.  By default, horizontal fansliders draw low to high from
+left to right, and vertical fansliders draw from bottom to top.
+You can reverse this behavior by setting <em class="parameter"><code>inverted</code></em> to <a
+href="../glib/glib-Standard-Macros.html#TRUE:CAPS"
+><code class="literal">TRUE</code></a>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>slider</code></em>&#160;:</span></td>
+<td> a <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>inverted</code></em>&#160;:</span></td>
+<td> <a
+href="../glib/glib-Standard-Macros.html#TRUE:CAPS"
+><code class="literal">TRUE</code></a> to invert the fanslider
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id364897"></a><h3>
+<a name="phat-fan-slider-get-inverted"></a>phat_fan_slider_get_inverted ()</h3>
+<a class="indexterm" name="id364907"></a><pre class="programlisting"><a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    phat_fan_slider_get_inverted    (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider);</pre>
+<p>
+Determines whether <em class="parameter"><code>slider</code></em> is inverted or not.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>slider</code></em>&#160;:</span></td>
+<td> a <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> <a
+href="../glib/glib-Standard-Macros.html#TRUE:CAPS"
+><code class="literal">TRUE</code></a> if <em class="parameter"><code>slider</code></em> is inverted
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id364985"></a><h3>
+<a name="phat-fan-slider-set-default-value"></a>phat_fan_slider_set_default_value ()</h3>
+<a class="indexterm" name="id364995"></a><pre class="programlisting">void        phat_fan_slider_set_default_value
+                                            (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                             <a
+href="../glib/glib-Basic-Types.html#gdouble"
+>gdouble</a> value);</pre>
+<p>
+Set default value of the slider. Slider is reset to this value
+when middle mouse button is pressed.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>slider</code></em>&#160;:</span></td>
+<td> a <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>value</code></em>&#160;:</span></td>
+<td> the default value
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id365065"></a><h2>Signal Details</h2>
+<div class="refsect2" lang="en">
+<a name="id365074"></a><h3>
+<a name="PhatFanSlider-changed"></a>The "changed" signal</h3>
+<a class="indexterm" name="id365082"></a><pre class="programlisting">void        user_function                  (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                            <a
+href="../glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run first / Action</pre>
+<p>
+The "changed" signal is emitted when any parameter of the
+slider's adjustment changes, except for the <code class="literal">value</code> parameter.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>slider</code></em>&#160;:</span></td>
+<td> the object on which the signal was emitted
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id365150"></a><h3>
+<a name="PhatFanSlider-value-changed"></a>The "value-changed" signal</h3>
+<a class="indexterm" name="id365158"></a><pre class="programlisting">void        user_function                  (<a href="PhatFanSlider.html" title="PhatFanSlider">PhatFanSlider</a> *slider,
+                                            <a
+href="../glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run first / Action</pre>
+<p>
+The "value-changed" signal is emitted when the value of the
+slider's adjustment changes.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>slider</code></em>&#160;:</span></td>
+<td> the object on which the signal was emitted
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id365221"></a><h2>See Also</h2>
+<p>
+<a href="PhatHFanSlider.html" title="PhatHFanSlider"><span class="type">PhatHFanSlider</span></a> and <a href="PhatVFanSlider.html" title="PhatVFanSlider"><span class="type">PhatVFanSlider</span></a> to create instances of <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a>.
+</p>
+</div>
+</div>
+</body>
+</html>

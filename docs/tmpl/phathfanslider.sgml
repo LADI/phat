@@ -1,0 +1,49 @@
+<!-- ##### SECTION Title ##### -->
+PhatHFanSlider
+
+<!-- ##### SECTION Short_Description ##### -->
+a horizontal fanslider widget for selecting a floating point value from a range
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+#PhatHFanSlider is a wrapper class for the abstract base
+#PhatFanSlider class.  After creating a #PhatHFanSlider, you should
+interact with it using the #PhatFanSlider functions.
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+#PhatFanSlider provides functions for interacting with #PhatHFanSlider widgets.
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT PhatHFanSlider ##### -->
+<para>
+The #PhatHFanSlider-struct struct contains private data only, and
+should be accessed using the functions below.
+</para>
+
+
+<!-- ##### FUNCTION phat_hfan_slider_new ##### -->
+<para>
+
+</para>
+
+@adjustment: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_hfan_slider_new_with_range ##### -->
+<para>
+
+</para>
+
+@value: 
+@lower: 
+@upper: 
+@step: 
+@Returns: 
+
+

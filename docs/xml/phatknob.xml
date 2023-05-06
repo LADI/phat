@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="phat-PhatKnob">
+<refmeta>
+<refentrytitle role="top_of_page">PhatKnob</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>PHAT Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>PhatKnob</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+
+
+            <link linkend="PhatKnob">PhatKnob</link>;
+<link linkend="GtkWidget">GtkWidget</link>*  <link linkend="phat-knob-new">phat_knob_new</link>                   (<link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment);
+<link linkend="GtkWidget">GtkWidget</link>*  <link linkend="phat-knob-new-with-range">phat_knob_new_with_range</link>        (<link linkend="double">double</link> value,
+                                             <link linkend="double">double</link> lower,
+                                             <link linkend="double">double</link> upper,
+                                             <link linkend="double">double</link> step);
+<link linkend="GtkAdjustment">GtkAdjustment</link>* <link linkend="phat-knob-get-adjustment">phat_knob_get_adjustment</link>     (<link linkend="PhatKnob">PhatKnob</link> *knob);
+<link linkend="double">double</link>      <link linkend="phat-knob-get-value">phat_knob_get_value</link>             (<link linkend="PhatKnob">PhatKnob</link> *knob);
+<link linkend="void">void</link>        <link linkend="phat-knob-set-value">phat_knob_set_value</link>             (<link linkend="PhatKnob">PhatKnob</link> *knob,
+                                             <link linkend="double">double</link> value);
+<link linkend="void">void</link>        <link linkend="phat-knob-set-range">phat_knob_set_range</link>             (<link linkend="PhatKnob">PhatKnob</link> *knob,
+                                             <link linkend="double">double</link> lower,
+                                             <link linkend="double">double</link> upper);
+<link linkend="void">void</link>        <link linkend="phat-knob-set-update-policy">phat_knob_set_update_policy</link>     (<link linkend="PhatKnob">PhatKnob</link> *knob,
+                                             <link linkend="GtkUpdateType">GtkUpdateType</link> policy);
+<link linkend="void">void</link>        <link linkend="phat-knob-set-adjustment">phat_knob_set_adjustment</link>        (<link linkend="PhatKnob">PhatKnob</link> *knob,
+                                             <link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment);
+<link linkend="void">void</link>        <link linkend="phat-knob-set-log">phat_knob_set_log</link>               (<link linkend="PhatKnob">PhatKnob</link> *knob,
+                                             <link linkend="gboolean">gboolean</link> is_log);
+<link linkend="gboolean">gboolean</link>    <link linkend="phat-knob-is-log">phat_knob_is_log</link>                (<link linkend="PhatKnob">PhatKnob</link> *knob);
+
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="PhatKnob" role="struct"/>PhatKnob</title>
+<indexterm><primary>PhatKnob</primary></indexterm><programlisting>typedef struct {
+    GtkWidget widget;
+    /* The adjustment object that stores the data for this knob */
+    GtkAdjustment *adjustment;
+    GtkAdjustment* adjustment_prv;
+
+
+    /* update policy (GTK_UPDATE_[CONTINUOUS/DELAYED/DISCONTINUOUS]) */
+    guint policy : 2;
+    gboolean is_log;
+
+    /* State of widget (to do with user interaction) */
+    guint8 state;
+    gint saved_x, saved_y;
+
+    /* ID of update timer, or 0 if none */
+    guint32 timer;
+
+    /* Pixmap for knob */
+    GdkPixbuf *pixbuf;
+    GdkBitmap *mask;
+    GdkGC *mask_gc;
+    GdkGC *red_gc;
+
+    /* Old values from adjustment stored so we know when something changes */
+    gfloat old_value;
+    gfloat old_lower;
+    gfloat old_upper;
+} PhatKnob;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="phat-knob-new" role="function"/>phat_knob_new ()</title>
+<indexterm><primary>phat_knob_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*  phat_knob_new                   (<link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>adjustment</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-knob-new-with-range" role="function"/>phat_knob_new_with_range ()</title>
+<indexterm><primary>phat_knob_new_with_range</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*  phat_knob_new_with_range        (<link linkend="double">double</link> value,
+                                             <link linkend="double">double</link> lower,
+                                             <link linkend="double">double</link> upper,
+                                             <link linkend="double">double</link> step);</programlisting>
+<para>
+Creates a new <link linkend="PhatKnob"><type>PhatKnob</type></link>.  The knob will create a new
+<link linkend="GtkAdjustment"><type>GtkAdjustment</type></link> from <parameter>value</parameter>, <parameter>lower</parameter>, <parameter>upper</parameter>, and <parameter>step</parameter>.  If these
+parameters represent a bogus configuration, the program will
+terminate.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><simpara> the initial value the new knob should have
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>lower</parameter>&nbsp;:</term>
+<listitem><simpara> the lowest value the new knob will allow
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>upper</parameter>&nbsp;:</term>
+<listitem><simpara> the highest value the new knob will allow
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>step</parameter>&nbsp;:</term>
+<listitem><simpara> increment added or subtracted when turning
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> a newly created <link linkend="PhatKnob"><type>PhatKnob</type></link>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-knob-get-adjustment" role="function"/>phat_knob_get_adjustment ()</title>
+<indexterm><primary>phat_knob_get_adjustment</primary></indexterm><programlisting><link linkend="GtkAdjustment">GtkAdjustment</link>* phat_knob_get_adjustment     (<link linkend="PhatKnob">PhatKnob</link> *knob);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>knob</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-knob-get-value" role="function"/>phat_knob_get_value ()</title>
+<indexterm><primary>phat_knob_get_value</primary></indexterm><programlisting><link linkend="double">double</link>      phat_knob_get_value             (<link linkend="PhatKnob">PhatKnob</link> *knob);</programlisting>
+<para>
+Retrieves the current value of the knob.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>knob</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatKnob"><type>PhatKnob</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> current value of the knob
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-knob-set-value" role="function"/>phat_knob_set_value ()</title>
+<indexterm><primary>phat_knob_set_value</primary></indexterm><programlisting><link linkend="void">void</link>        phat_knob_set_value             (<link linkend="PhatKnob">PhatKnob</link> *knob,
+                                             <link linkend="double">double</link> value);</programlisting>
+<para>
+Sets the current value of the knob.  If the value is outside the
+range of values allowed by <parameter>knob</parameter>, it will be clamped.  The knob
+emits the "value-changed" signal if the value changes.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>knob</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatKnob"><type>PhatKnob</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><simpara> a new value for the knob
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-knob-set-range" role="function"/>phat_knob_set_range ()</title>
+<indexterm><primary>phat_knob_set_range</primary></indexterm><programlisting><link linkend="void">void</link>        phat_knob_set_range             (<link linkend="PhatKnob">PhatKnob</link> *knob,
+                                             <link linkend="double">double</link> lower,
+                                             <link linkend="double">double</link> upper);</programlisting>
+<para>
+Sets the range of allowable values for the knob, and clamps the
+knob's current value to be between <parameter>lower</parameter> and <parameter>upper</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>knob</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatKnob"><type>PhatKnob</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>lower</parameter>&nbsp;:</term>
+<listitem><simpara> lowest allowable value
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>upper</parameter>&nbsp;:</term>
+<listitem><simpara> highest allowable value
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-knob-set-update-policy" role="function"/>phat_knob_set_update_policy ()</title>
+<indexterm><primary>phat_knob_set_update_policy</primary></indexterm><programlisting><link linkend="void">void</link>        phat_knob_set_update_policy     (<link linkend="PhatKnob">PhatKnob</link> *knob,
+                                             <link linkend="GtkUpdateType">GtkUpdateType</link> policy);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>knob</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>policy</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-knob-set-adjustment" role="function"/>phat_knob_set_adjustment ()</title>
+<indexterm><primary>phat_knob_set_adjustment</primary></indexterm><programlisting><link linkend="void">void</link>        phat_knob_set_adjustment        (<link linkend="PhatKnob">PhatKnob</link> *knob,
+                                             <link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>knob</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>adjustment</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-knob-set-log" role="function"/>phat_knob_set_log ()</title>
+<indexterm><primary>phat_knob_set_log</primary></indexterm><programlisting><link linkend="void">void</link>        phat_knob_set_log               (<link linkend="PhatKnob">PhatKnob</link> *knob,
+                                             <link linkend="gboolean">gboolean</link> is_log);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>knob</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>is_log</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-knob-is-log" role="function"/>phat_knob_is_log ()</title>
+<indexterm><primary>phat_knob_is_log</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>    phat_knob_is_log                (<link linkend="PhatKnob">PhatKnob</link> *knob);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>knob</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

@@ -1,0 +1,821 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>PhatSliderButton</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.70.1">
+<link rel="start" href="index.html" title="PHAT Reference Manual">
+<link rel="up" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+<link rel="prev" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+<link rel="next" href="PhatHFanSlider.html" title="PhatHFanSlider">
+<meta name="generator" content="GTK-Doc V1.7 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="phat.html" title="Part&#160;I.&#160;PHAT Overview">
+<link rel="part" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="phatwidgets.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="phatwidgets.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">PHAT Reference Manual</th>
+<td><a accesskey="n" href="PhatHFanSlider.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id342150" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id331157" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id331008" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id331069" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id331091" class="shortcut">Signals</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="PhatSliderButton"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id342150"></a><span class="refentrytitle">PhatSliderButton</span>
+</h2>
+<p>PhatSliderButton &#8212; 
+retrieve an integer or floating-point number from the user</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+            <a href="PhatSliderButton.html#PhatSliderButton-struct">PhatSliderButton</a>;
+<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  <a href="PhatSliderButton.html#phat-slider-button-new">phat_slider_button_new</a>          (<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment,
+                                             int digits);
+<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  <a href="PhatSliderButton.html#phat-slider-button-new-with-range">phat_slider_button_new_with_range</a>
+                                            (double value,
+                                             double lower,
+                                             double upper,
+                                             double step,
+                                             int digits);
+void        <a href="PhatSliderButton.html#phat-slider-button-set-value">phat_slider_button_set_value</a>    (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             double value);
+double      <a href="PhatSliderButton.html#phat-slider-button-get-value">phat_slider_button_get_value</a>    (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button);
+void        <a href="PhatSliderButton.html#phat-slider-button-set-range">phat_slider_button_set_range</a>    (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             double lower,
+                                             double upper);
+void        <a href="PhatSliderButton.html#phat-slider-button-get-range">phat_slider_button_get_range</a>    (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             double *lower,
+                                             double *upper);
+void        <a href="PhatSliderButton.html#phat-slider-button-set-adjustment">phat_slider_button_set_adjustment</a>
+                                            (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             <a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment);
+<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* <a href="PhatSliderButton.html#phat-slider-button-get-adjustment">phat_slider_button_get_adjustment</a>
+                                            (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button);
+void        <a href="PhatSliderButton.html#phat-slider-button-set-increment">phat_slider_button_set_increment</a>
+                                            (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             double step,
+                                             double page);
+void        <a href="PhatSliderButton.html#phat-slider-button-get-increment">phat_slider_button_get_increment</a>
+                                            (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             double *step,
+                                             double *page);
+void        <a href="PhatSliderButton.html#phat-slider-button-set-format">phat_slider_button_set_format</a>   (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             int digits,
+                                             const char *prefix,
+                                             const char *postfix);
+void        <a href="PhatSliderButton.html#phat-slider-button-get-format">phat_slider_button_get_format</a>   (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             int *digits,
+                                             char **prefix,
+                                             char **postfix);
+void        <a href="PhatSliderButton.html#phat-slider-button-set-threshold">phat_slider_button_set_threshold</a>
+                                            (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             <a
+href="../glib/glib-Basic-Types.html#guint"
+>guint</a> threshold);
+int         <a href="PhatSliderButton.html#phat-slider-button-get-threshold">phat_slider_button_get_threshold</a>
+                                            (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id331008"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  <a
+href="../gobject/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="../gobject/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="../gtk/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="../gtk/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="../gtk/GtkBox.html"
+>GtkBox</a>
+                                 +----<a
+href="../gtk/GtkHBox.html"
+>GtkHBox</a>
+                                       +----PhatSliderButton
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id331069"></a><h2>Implemented Interfaces</h2>
+<p>
+PhatSliderButton implements
+ AtkImplementorIface.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id331091"></a><h2>Signals</h2>
+<pre class="synopsis">
+
+"<a href="PhatSliderButton.html#PhatSliderButton-changed">changed</a>"   void        user_function      (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                            <a
+href="../glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>          user_data)      : Run first / Action
+"<a href="PhatSliderButton.html#PhatSliderButton-value-changed">value-changed</a>"
+            void        user_function      (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                            <a
+href="../glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>          user_data)      : Run first / Action
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id331157"></a><h2>Description</h2>
+<p>
+A <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a> can be used in place of a <a
+href="../gtk/GtkSpinButton.html"
+><span class="type">GtkSpinButton</span></a>.  It's a
+better choice than a <a href="PhatFanSlider.html" title="PhatFanSlider"><span class="type">PhatFanSlider</span></a> when you want the user to clearly
+see the value they are setting, or want to constrain their selection
+to a set of discrete values (fansliders are "continuous").
+</p>
+<p>
+Sliderbuttons allow the user to change the value by grabbing the
+widget and dragging.  They can also make small "one off" adjustments
+via the arrow buttons, or click the button to enter the value
+directly.  They have a slightly higher learning curve than standard
+spinbuttons, but they offer much more efficiency to the user.
+</p>
+<p>
+The way the current value of a sliderbutton is displayed is controlled
+with a printf style format specifier supplied at widget creation.
+Since sliderbuttons operate with doubles, the specifier should be in
+the form of "%<code class="literal">f</code>" or any of the other double compatible printf escapes.
+You should resist the urge to embed other information in the format
+specifier, since that extra text will also wind up in the entry when
+the user clicks the button.  Instead, use
+<a href="PhatSliderButton.html#phat-slider-button-set-format"><code class="function">phat_slider_button_set_format()</code></a> to set prefix and/or postfix text.
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id356152"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id356161"></a><h3>
+<a name="PhatSliderButton-struct"></a>PhatSliderButton</h3>
+<a class="indexterm" name="id356173"></a><pre class="programlisting">typedef struct _PhatSliderButton PhatSliderButton;</pre>
+<p>
+The <a href="PhatSliderButton.html#PhatSliderButton-struct"><span class="type">PhatSliderButton</span></a> struct contains private data only, and
+should be accessed using the functions below.
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id356196"></a><h3>
+<a name="phat-slider-button-new"></a>phat_slider_button_new ()</h3>
+<a class="indexterm" name="id356208"></a><pre class="programlisting"><a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  phat_slider_button_new          (<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment,
+                                             int digits);</pre>
+<p>
+Creates a new <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>adjustment</code></em>&#160;:</span></td>
+<td> the <a
+href="../gtk/GtkAdjustment.html"
+><span class="type">GtkAdjustment</span></a> that the new button will use
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>digits</code></em>&#160;:</span></td>
+<td> number of decimal digits to display
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> a newly created <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id356310"></a><h3>
+<a name="phat-slider-button-new-with-range"></a>phat_slider_button_new_with_range ()</h3>
+<a class="indexterm" name="id356322"></a><pre class="programlisting"><a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  phat_slider_button_new_with_range
+                                            (double value,
+                                             double lower,
+                                             double upper,
+                                             double step,
+                                             int digits);</pre>
+<p>
+Creates a new <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>.  The slider will create a new
+<a
+href="../gtk/GtkAdjustment.html"
+><span class="type">GtkAdjustment</span></a> from <em class="parameter"><code>value</code></em>, <em class="parameter"><code>lower</code></em>, <em class="parameter"><code>upper</code></em>, and <em class="parameter"><code>step</code></em>.  If these
+parameters represent a bogus configuration, the program will
+terminate.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>value</code></em>&#160;:</span></td>
+<td> the initial value the new button should have
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>lower</code></em>&#160;:</span></td>
+<td> the lowest value the new button will allow
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>upper</code></em>&#160;:</span></td>
+<td> the highest value the new button will allow
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>step</code></em>&#160;:</span></td>
+<td> increment added or subtracted when sliding
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>digits</code></em>&#160;:</span></td>
+<td> number of decimal digits to display
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> a newly created <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id356507"></a><h3>
+<a name="phat-slider-button-set-value"></a>phat_slider_button_set_value ()</h3>
+<a class="indexterm" name="id356519"></a><pre class="programlisting">void        phat_slider_button_set_value    (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             double value);</pre>
+<p>
+Sets the current value of the button.  If the value is outside the
+range of values allowed by <em class="parameter"><code>button</code></em>, it will be clamped.  The button
+emits the "value-changed" signal if the value changes.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> a <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>value</code></em>&#160;:</span></td>
+<td> a new value for the button
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id356603"></a><h3>
+<a name="phat-slider-button-get-value"></a>phat_slider_button_get_value ()</h3>
+<a class="indexterm" name="id356615"></a><pre class="programlisting">double      phat_slider_button_get_value    (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button);</pre>
+<p>
+Retrieves the current value of the button.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> a <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> current value of the button
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id356682"></a><h3>
+<a name="phat-slider-button-set-range"></a>phat_slider_button_set_range ()</h3>
+<a class="indexterm" name="id356694"></a><pre class="programlisting">void        phat_slider_button_set_range    (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             double lower,
+                                             double upper);</pre>
+<p>
+Sets the range of allowable values for the button, and clamps the
+button's current value to be between <em class="parameter"><code>lower</code></em> and <em class="parameter"><code>upper</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> a <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>lower</code></em>&#160;:</span></td>
+<td> lowest allowable value
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>upper</code></em>&#160;:</span></td>
+<td> highest allowable value
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id356803"></a><h3>
+<a name="phat-slider-button-get-range"></a>phat_slider_button_get_range ()</h3>
+<a class="indexterm" name="id356815"></a><pre class="programlisting">void        phat_slider_button_get_range    (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             double *lower,
+                                             double *upper);</pre>
+<p>
+Places the range of allowable values for <em class="parameter"><code>button</code></em> into <em class="parameter"><code>lower</code></em>
+and <em class="parameter"><code>upper</code></em>.  Either variable may be set to <a
+href="../glib/glib-Standard-Macros.html#NULL:CAPS"
+><code class="literal">NULL</code></a> if you are not
+interested in its value.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> a <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>lower</code></em>&#160;:</span></td>
+<td> retrieves lowest allowable value
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>upper</code></em>&#160;:</span></td>
+<td> retrieves highest allowable value
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id356912"></a><h3>
+<a name="phat-slider-button-set-adjustment"></a>phat_slider_button_set_adjustment ()</h3>
+<a class="indexterm" name="id356922"></a><pre class="programlisting">void        phat_slider_button_set_adjustment
+                                            (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             <a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment);</pre>
+<p>
+Sets the adjustment used by <em class="parameter"><code>button</code></em>.  If <em class="parameter"><code>adjustment</code></em> is <a
+href="../glib/glib-Standard-Macros.html#NULL:CAPS"
+><code class="literal">NULL</code></a>, a
+new adjustment with a value of zero and a range of [-1.0, 1.0] will
+be created.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> a <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>adjustment</code></em>&#160;:</span></td>
+<td> a <a
+href="../gtk/GtkAdjustment.html"
+><span class="type">GtkAdjustment</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id357016"></a><h3>
+<a name="phat-slider-button-get-adjustment"></a>phat_slider_button_get_adjustment ()</h3>
+<a class="indexterm" name="id357026"></a><pre class="programlisting"><a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* phat_slider_button_get_adjustment
+                                            (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button);</pre>
+<p>
+Retrives the current adjustment in use by <em class="parameter"><code>button</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> a <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> <em class="parameter"><code>button</code></em>'s current <a
+href="../gtk/GtkAdjustment.html"
+><span class="type">GtkAdjustment</span></a>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id357103"></a><h3>
+<a name="phat-slider-button-set-increment"></a>phat_slider_button_set_increment ()</h3>
+<a class="indexterm" name="id357113"></a><pre class="programlisting">void        phat_slider_button_set_increment
+                                            (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             double step,
+                                             double page);</pre>
+<p>
+Sets the increments the button should use.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> a <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>step</code></em>&#160;:</span></td>
+<td> step increment value
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>page</code></em>&#160;:</span></td>
+<td> page increment value
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id357199"></a><h3>
+<a name="phat-slider-button-get-increment"></a>phat_slider_button_get_increment ()</h3>
+<a class="indexterm" name="id357209"></a><pre class="programlisting">void        phat_slider_button_get_increment
+                                            (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             double *step,
+                                             double *page);</pre>
+<p>
+Places the button's increment values into <em class="parameter"><code>step</code></em> and <em class="parameter"><code>page</code></em>.  Either
+variable may be set to <a
+href="../glib/glib-Standard-Macros.html#NULL:CAPS"
+><code class="literal">NULL</code></a> if you are not interested in its
+value.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> a <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>step</code></em>&#160;:</span></td>
+<td> retrieves step increment value
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>page</code></em>&#160;:</span></td>
+<td> retrieves page increment value
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id357314"></a><h3>
+<a name="phat-slider-button-set-format"></a>phat_slider_button_set_format ()</h3>
+<a class="indexterm" name="id357324"></a><pre class="programlisting">void        phat_slider_button_set_format   (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             int digits,
+                                             const char *prefix,
+                                             const char *postfix);</pre>
+<p>
+Sets the way <em class="parameter"><code>button</code></em> renders it's label.  If the first character in
+either <em class="parameter"><code>prefix</code></em> or <em class="parameter"><code>postfix</code></em> is '\0' the corresponding parameter will
+be unset.  If you don't want to adjust <em class="parameter"><code>digits</code></em>, set it to a
+negative value.  If you don't want to adjust <em class="parameter"><code>prefix</code></em> and/or
+<em class="parameter"><code>postfix</code></em>, set them to <a
+href="../glib/glib-Standard-Macros.html#NULL:CAPS"
+><code class="literal">NULL</code></a>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> a <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>digits</code></em>&#160;:</span></td>
+<td> number of decimal digits to display
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>prefix</code></em>&#160;:</span></td>
+<td> text to prepend to number
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>postfix</code></em>&#160;:</span></td>
+<td> text to append to number
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id357469"></a><h3>
+<a name="phat-slider-button-get-format"></a>phat_slider_button_get_format ()</h3>
+<a class="indexterm" name="id357480"></a><pre class="programlisting">void        phat_slider_button_get_format   (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             int *digits,
+                                             char **prefix,
+                                             char **postfix);</pre>
+<p>
+Retrieves the information <em class="parameter"><code>button</code></em> uses to create its label.  The
+value returned will point to the button's local copy, so don't
+write to it.  Set the pointers for any value you aren't interested
+in to <a
+href="../glib/glib-Standard-Macros.html#NULL:CAPS"
+><code class="literal">NULL</code></a>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> a <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>digits</code></em>&#160;:</span></td>
+<td> retrieves the number of decimal digits to display
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>prefix</code></em>&#160;:</span></td>
+<td> retrieves text prepended to number
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>postfix</code></em>&#160;:</span></td>
+<td> retrieves text appended to number
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id357598"></a><h3>
+<a name="phat-slider-button-set-threshold"></a>phat_slider_button_set_threshold ()</h3>
+<a class="indexterm" name="id357608"></a><pre class="programlisting">void        phat_slider_button_set_threshold
+                                            (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                             <a
+href="../glib/glib-Basic-Types.html#guint"
+>guint</a> threshold);</pre>
+<p>
+Sets the threshold for <em class="parameter"><code>button</code></em>.  The threshold is how far the user
+has to move the mouse to effect a change when sliding.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> a <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>threshold</code></em>&#160;:</span></td>
+<td> an unsigned int &gt;= 1
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id357682"></a><h3>
+<a name="phat-slider-button-get-threshold"></a>phat_slider_button_get_threshold ()</h3>
+<a class="indexterm" name="id357693"></a><pre class="programlisting">int         phat_slider_button_get_threshold
+                                            (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button);</pre>
+<p>
+Retrieves the threshold for <em class="parameter"><code>button</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> a <a href="PhatSliderButton.html" title="PhatSliderButton"><span class="type">PhatSliderButton</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> the threshold for <em class="parameter"><code>button</code></em>, or -1 if <em class="parameter"><code>button</code></em> is invalid
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id357768"></a><h2>Signal Details</h2>
+<div class="refsect2" lang="en">
+<a name="id357777"></a><h3>
+<a name="PhatSliderButton-changed"></a>The "changed" signal</h3>
+<a class="indexterm" name="id357785"></a><pre class="programlisting">void        user_function                  (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                            <a
+href="../glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>          user_data)      : Run first / Action</pre>
+<p>
+The "changed" signal is emitted when any parameter of the
+slider's adjustment changes, except for the <code class="literal">value</code> parameter.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> the object on which the signal was emitted
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id357854"></a><h3>
+<a name="PhatSliderButton-value-changed"></a>The "value-changed" signal</h3>
+<a class="indexterm" name="id357861"></a><pre class="programlisting">void        user_function                  (<a href="PhatSliderButton.html" title="PhatSliderButton">PhatSliderButton</a> *button,
+                                            <a
+href="../glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>          user_data)      : Run first / Action</pre>
+<p>
+The "value-changed" signal is emitted when the value of the
+button's adjustment changes.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>button</code></em>&#160;:</span></td>
+<td> the object on which the signal was emitted
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

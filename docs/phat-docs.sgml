@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<book id="index" xmlns:xi="http://www.w3.org/2003/XInclude">
+  <bookinfo>
+    <title>PHAT Reference Manual</title>
+  </bookinfo>
+
+  <part id="phat">
+    <title>PHAT Overview</title>
+
+    <partintro id="phatintro">
+
+      <para>PHAT is a library of <ulink
+      url="http://www.gtk.org">GTK+</ulink> widgets which are useful
+      for pro-audio apps.  The name is a backronym which stands for
+      "the PHat Audio Toolkit."</para>
+
+    </partintro>
+
+    <refentry id="install">
+      <refnamediv>
+	<refname>Installation</refname>
+	<refpurpose>How to build and install PHAT on your system</refpurpose>
+      </refnamediv>
+      <refsect1>
+	<title>Linux Systems</title>
+
+	<para>If you're familiar with standard tarball compilation and
+	installation procedures, then PHAT won't pose a problem for
+	you.  If you're not used to the tarball dance, you'll still
+	probably do just fine if you follow these instructions.</para>
+
+	<para>Apart from having a generally sane Linux distribution
+	and build environment, you need to have <ulink
+	url="http://www.gtk.org">GTK+-2.0</ulink> or greater
+	installed, along with it's development files.</para>
+
+	<para>The magic incantantations to build and install PHAT are
+	as follows:</para>
+
+	<programlisting>
+        tar -xzvpf phat.tar.gz
+        cd phat.tar.gz
+        ./configure
+        make
+        su
+        &lt;enter root password&gt;
+        make install
+        /sbin/ldconfig
+        </programlisting>
+
+	<para>Replace "phat.tar.gz" above with the actual name of the
+	package you downloaded and you should be golden.</para>
+
+      </refsect1>
+
+      <refsect1>
+	<title>Other Systems</title> 
+
+        <para>I don't see why PHAT should fail to build on other POSIX
+	systems such as the BSDs, but I'm not supporting it either.
+	If and when that "I" becomes a "we," that policy may
+	change.</para>
+
+	<para>If you're using Windows you're probably S.O.L., but that
+	too could change in the future (see above).</para>
+
+      </refsect1>
+    </refentry>
+
+    <refentry id="use">
+      <refnamediv>
+	<refname>Usage</refname> <refpurpose>How to compile programs
+	which use PHAT</refpurpose>
+      </refnamediv>
+      <refsect1>
+	<title>Compiling PHAT apps</title>
+
+	<para>PHAT comes with a pkg-config .pc file, so using it is a
+	snap. Run "man pkg-config" to learn how to make all your
+	compilation dependcy woes disappear.</para>
+
+      </refsect1>
+    </refentry>
+  </part>
+
+  <part id="phatwidgets">
+    <title>PHAT Widgets</title>
+    <xi:include href="xml/phatsliderbutton.xml"/>
+    <xi:include href="xml/phathfanslider.xml"/>
+    <xi:include href="xml/phatvkeyboard.xml"/>
+    <xi:include href="xml/phatknob.xml"/>
+    <xi:include href="xml/phatvfanslider.xml"/>
+    <xi:include href="xml/phatkeyboard.xml"/>
+    <xi:include href="xml/phatpad.xml"/>
+    <xi:include href="xml/phatfanslider.xml"/>
+    <xi:include href="xml/phathkeyboard.xml"/>
+  </part>
+
+</book>

@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="PhatHKeyboard">
+<refmeta>
+<refentrytitle role="top_of_page">PhatHKeyboard</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>PHAT Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>PhatHKeyboard</refname>
+<refpurpose>a horizontal keyboard widget</refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+
+
+            <link linkend="PhatHKeyboard-struct">PhatHKeyboard</link>;
+<link linkend="GtkWidget">GtkWidget</link>*  <link linkend="phat-hkeyboard-new">phat_hkeyboard_new</link>              (<link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment,
+                                             <link linkend="int">int</link> numkeys,
+                                             <link linkend="gboolean">gboolean</link> show_labels);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkBin">GtkBin</link>
+                                 +----<link linkend="GtkViewport">GtkViewport</link>
+                                       +----<link linkend="PhatKeyboard">PhatKeyboard</link>
+                                             +----PhatHKeyboard
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+PhatHKeyboard implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link>.</para>
+
+</refsect1>
+
+
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+<link linkend="PhatHKeyboard"><type>PhatHKeyboard</type></link> is a wrapper for the abstract <link linkend="PhatKeyboard"><type>PhatKeyboard</type></link> class.
+After creating a <link linkend="PhatHKeyboard"><type>PhatHKeyboard</type></link>, you should interact with it using the
+<link linkend="PhatKeyboard"><type>PhatKeyboard</type></link> functions.
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="PhatHKeyboard-struct" role="struct"/>PhatHKeyboard</title>
+<indexterm><primary>PhatHKeyboard</primary></indexterm><programlisting>typedef struct _PhatHKeyboard PhatHKeyboard;</programlisting>
+<para>
+The <link linkend="PhatHKeyboard-struct"><type>PhatHKeyboard</type></link> struct contains private data only, and
+should be accessed using the functions below.
+</para></refsect2>
+<refsect2>
+<title><anchor id="phat-hkeyboard-new" role="function"/>phat_hkeyboard_new ()</title>
+<indexterm><primary>phat_hkeyboard_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*  phat_hkeyboard_new              (<link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment,
+                                             <link linkend="int">int</link> numkeys,
+                                             <link linkend="gboolean">gboolean</link> show_labels);</programlisting>
+<para>
+Creates a new <link linkend="PhatHKeyboard"><type>PhatHKeyboard</type></link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>adjustment</parameter>&nbsp;:</term>
+<listitem><simpara> the <link linkend="GtkAdjustment"><type>GtkAdjustment</type></link> that the new keyboard will use for scrolling
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>numkeys</parameter>&nbsp;:</term>
+<listitem><simpara> number of keys to create
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>show_labels</parameter>&nbsp;:</term>
+<listitem><simpara> whether to label the C keys
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> a newly created <link linkend="PhatHKeyboard"><type>PhatHKeyboard</type></link>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+<refsect1>
+<title>See Also</title>
+<para>
+<link linkend="PhatKeyboard"><type>PhatKeyboard</type></link> provides functions for interacting with <link linkend="PhatHKeyboard"><type>PhatHKeyboard</type></link> widgets.
+</para>
+</refsect1>
+
+</refentry>

@@ -1,0 +1,97 @@
+<!-- ##### SECTION Title ##### -->
+PhatKeyboard
+
+<!-- ##### SECTION Short_Description ##### -->
+a base class for #PhatHKeyboard and #PhatVKeyboard
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+The #PhatKeyboard widget family provides a simple piano-like keyboard.
+Since it is derived from #GtkViewport, it comes with the ability to
+scroll.  You don't have to worry about the values of the
+#GtkAdjustment it uses, just share said adjustment with a scrollbar
+and you'll be in business.
+</para>
+
+<para>
+#PhatKeyboard is an abstract base class, from which #PhatHKeyboard and
+#PhatVKeyboard are derived.  To create a new keyboard, call either
+phat_hkeyboard_new() or phat_vkeyboard_new().
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+#PhatHKeyboard and #PhatVKeyboard, to create new instances of #PhatKeyboard.
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT _Key ##### -->
+<para>
+
+</para>
+
+@index: 
+@keyboard: 
+@group: 
+@pre: 
+@on: 
+@shad: 
+
+<!-- ##### STRUCT PhatKeyboard ##### -->
+<para>
+The #PhatKeyboard-struct struct contains private data only, and should
+be accessed using the functions below.
+</para>
+
+
+<!-- ##### SIGNAL PhatKeyboard::key-pressed ##### -->
+<para>
+
+</para>
+
+@phatkeyboard: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL PhatKeyboard::key-released ##### -->
+<para>
+
+</para>
+
+@phatkeyboard: the object which received the signal.
+@arg1: 
+
+<!-- ##### ARG PhatKeyboard:numkeys ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG PhatKeyboard:orientation ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG PhatKeyboard:show-labels ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION phat_keyboard_get_adjustment ##### -->
+<para>
+
+</para>
+
+@keyboard: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_keyboard_set_adjustment ##### -->
+<para>
+
+</para>
+
+@keyboard: 
+@adjustment: 
+
+

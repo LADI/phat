@@ -1,0 +1,488 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="PhatSliderButton">
+<refmeta>
+<refentrytitle role="top_of_page">PhatSliderButton</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>PHAT Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>PhatSliderButton</refname>
+<refpurpose>
+retrieve an integer or floating-point number from the user</refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+
+
+            <link linkend="PhatSliderButton-struct">PhatSliderButton</link>;
+<link linkend="GtkWidget">GtkWidget</link>*  <link linkend="phat-slider-button-new">phat_slider_button_new</link>          (<link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment,
+                                             <link linkend="int">int</link> digits);
+<link linkend="GtkWidget">GtkWidget</link>*  <link linkend="phat-slider-button-new-with-range">phat_slider_button_new_with_range</link>
+                                            (<link linkend="double">double</link> value,
+                                             <link linkend="double">double</link> lower,
+                                             <link linkend="double">double</link> upper,
+                                             <link linkend="double">double</link> step,
+                                             <link linkend="int">int</link> digits);
+<link linkend="void">void</link>        <link linkend="phat-slider-button-set-value">phat_slider_button_set_value</link>    (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="double">double</link> value);
+<link linkend="double">double</link>      <link linkend="phat-slider-button-get-value">phat_slider_button_get_value</link>    (<link linkend="PhatSliderButton">PhatSliderButton</link> *button);
+<link linkend="void">void</link>        <link linkend="phat-slider-button-set-range">phat_slider_button_set_range</link>    (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="double">double</link> lower,
+                                             <link linkend="double">double</link> upper);
+<link linkend="void">void</link>        <link linkend="phat-slider-button-get-range">phat_slider_button_get_range</link>    (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="double">double</link> *lower,
+                                             <link linkend="double">double</link> *upper);
+<link linkend="void">void</link>        <link linkend="phat-slider-button-set-adjustment">phat_slider_button_set_adjustment</link>
+                                            (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment);
+<link linkend="GtkAdjustment">GtkAdjustment</link>* <link linkend="phat-slider-button-get-adjustment">phat_slider_button_get_adjustment</link>
+                                            (<link linkend="PhatSliderButton">PhatSliderButton</link> *button);
+<link linkend="void">void</link>        <link linkend="phat-slider-button-set-increment">phat_slider_button_set_increment</link>
+                                            (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="double">double</link> step,
+                                             <link linkend="double">double</link> page);
+<link linkend="void">void</link>        <link linkend="phat-slider-button-get-increment">phat_slider_button_get_increment</link>
+                                            (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="double">double</link> *step,
+                                             <link linkend="double">double</link> *page);
+<link linkend="void">void</link>        <link linkend="phat-slider-button-set-format">phat_slider_button_set_format</link>   (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="int">int</link> digits,
+                                             const <link linkend="char">char</link> *prefix,
+                                             const <link linkend="char">char</link> *postfix);
+<link linkend="void">void</link>        <link linkend="phat-slider-button-get-format">phat_slider_button_get_format</link>   (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="int">int</link> *digits,
+                                             <link linkend="char">char</link> **prefix,
+                                             <link linkend="char">char</link> **postfix);
+<link linkend="void">void</link>        <link linkend="phat-slider-button-set-threshold">phat_slider_button_set_threshold</link>
+                                            (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="guint">guint</link> threshold);
+<link linkend="int">int</link>         <link linkend="phat-slider-button-get-threshold">phat_slider_button_get_threshold</link>
+                                            (<link linkend="PhatSliderButton">PhatSliderButton</link> *button);
+
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkBox">GtkBox</link>
+                                 +----<link linkend="GtkHBox">GtkHBox</link>
+                                       +----PhatSliderButton
+</synopsis>
+
+</refsect1>
+
+
+
+<refsect1 role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+PhatSliderButton implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link>.</para>
+
+</refsect1>
+
+
+
+<refsect1 role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+
+&quot;<link linkend="PhatSliderButton-changed">changed</link>&quot;   <link linkend="void">void</link>        user_function      (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                            <link linkend="gpointer">gpointer</link>          user_data)      : Run first / Action
+&quot;<link linkend="PhatSliderButton-value-changed">value-changed</link>&quot;
+            <link linkend="void">void</link>        user_function      (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                            <link linkend="gpointer">gpointer</link>          user_data)      : Run first / Action
+</synopsis>
+</refsect1>
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+A <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link> can be used in place of a <link linkend="GtkSpinButton"><type>GtkSpinButton</type></link>.  It's a
+better choice than a <link linkend="PhatFanSlider"><type>PhatFanSlider</type></link> when you want the user to clearly
+see the value they are setting, or want to constrain their selection
+to a set of discrete values (fansliders are "continuous").
+</para>
+
+<para>
+Sliderbuttons allow the user to change the value by grabbing the
+widget and dragging.  They can also make small "one off" adjustments
+via the arrow buttons, or click the button to enter the value
+directly.  They have a slightly higher learning curve than standard
+spinbuttons, but they offer much more efficiency to the user.
+</para>
+
+<para>
+The way the current value of a sliderbutton is displayed is controlled
+with a printf style format specifier supplied at widget creation.
+Since sliderbuttons operate with doubles, the specifier should be in
+the form of "%<link linkend="f"><literal>f</literal></link>" or any of the other double compatible printf escapes.
+You should resist the urge to embed other information in the format
+specifier, since that extra text will also wind up in the entry when
+the user clicks the button.  Instead, use
+<link linkend="phat-slider-button-set-format"><function>phat_slider_button_set_format()</function></link> to set prefix and/or postfix text.
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="PhatSliderButton-struct" role="struct"/>PhatSliderButton</title>
+<indexterm><primary>PhatSliderButton</primary></indexterm><programlisting>typedef struct _PhatSliderButton PhatSliderButton;</programlisting>
+<para>
+The <link linkend="PhatSliderButton-struct"><type>PhatSliderButton</type></link> struct contains private data only, and
+should be accessed using the functions below.
+</para></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-new" role="function"/>phat_slider_button_new ()</title>
+<indexterm><primary>phat_slider_button_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*  phat_slider_button_new          (<link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment,
+                                             <link linkend="int">int</link> digits);</programlisting>
+<para>
+Creates a new <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>adjustment</parameter>&nbsp;:</term>
+<listitem><simpara> the <link linkend="GtkAdjustment"><type>GtkAdjustment</type></link> that the new button will use
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>digits</parameter>&nbsp;:</term>
+<listitem><simpara> number of decimal digits to display
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> a newly created <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-new-with-range" role="function"/>phat_slider_button_new_with_range ()</title>
+<indexterm><primary>phat_slider_button_new_with_range</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*  phat_slider_button_new_with_range
+                                            (<link linkend="double">double</link> value,
+                                             <link linkend="double">double</link> lower,
+                                             <link linkend="double">double</link> upper,
+                                             <link linkend="double">double</link> step,
+                                             <link linkend="int">int</link> digits);</programlisting>
+<para>
+Creates a new <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>.  The slider will create a new
+<link linkend="GtkAdjustment"><type>GtkAdjustment</type></link> from <parameter>value</parameter>, <parameter>lower</parameter>, <parameter>upper</parameter>, and <parameter>step</parameter>.  If these
+parameters represent a bogus configuration, the program will
+terminate.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><simpara> the initial value the new button should have
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>lower</parameter>&nbsp;:</term>
+<listitem><simpara> the lowest value the new button will allow
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>upper</parameter>&nbsp;:</term>
+<listitem><simpara> the highest value the new button will allow
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>step</parameter>&nbsp;:</term>
+<listitem><simpara> increment added or subtracted when sliding
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>digits</parameter>&nbsp;:</term>
+<listitem><simpara> number of decimal digits to display
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> a newly created <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-set-value" role="function"/>phat_slider_button_set_value ()</title>
+<indexterm><primary>phat_slider_button_set_value</primary></indexterm><programlisting><link linkend="void">void</link>        phat_slider_button_set_value    (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="double">double</link> value);</programlisting>
+<para>
+Sets the current value of the button.  If the value is outside the
+range of values allowed by <parameter>button</parameter>, it will be clamped.  The button
+emits the "value-changed" signal if the value changes.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><simpara> a new value for the button
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-get-value" role="function"/>phat_slider_button_get_value ()</title>
+<indexterm><primary>phat_slider_button_get_value</primary></indexterm><programlisting><link linkend="double">double</link>      phat_slider_button_get_value    (<link linkend="PhatSliderButton">PhatSliderButton</link> *button);</programlisting>
+<para>
+Retrieves the current value of the button.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> current value of the button
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-set-range" role="function"/>phat_slider_button_set_range ()</title>
+<indexterm><primary>phat_slider_button_set_range</primary></indexterm><programlisting><link linkend="void">void</link>        phat_slider_button_set_range    (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="double">double</link> lower,
+                                             <link linkend="double">double</link> upper);</programlisting>
+<para>
+Sets the range of allowable values for the button, and clamps the
+button's current value to be between <parameter>lower</parameter> and <parameter>upper</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>lower</parameter>&nbsp;:</term>
+<listitem><simpara> lowest allowable value
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>upper</parameter>&nbsp;:</term>
+<listitem><simpara> highest allowable value
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-get-range" role="function"/>phat_slider_button_get_range ()</title>
+<indexterm><primary>phat_slider_button_get_range</primary></indexterm><programlisting><link linkend="void">void</link>        phat_slider_button_get_range    (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="double">double</link> *lower,
+                                             <link linkend="double">double</link> *upper);</programlisting>
+<para>
+Places the range of allowable values for <parameter>button</parameter> into <parameter>lower</parameter>
+and <parameter>upper</parameter>.  Either variable may be set to <link linkend="NULL:CAPS"><literal>NULL</literal></link> if you are not
+interested in its value.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>lower</parameter>&nbsp;:</term>
+<listitem><simpara> retrieves lowest allowable value
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>upper</parameter>&nbsp;:</term>
+<listitem><simpara> retrieves highest allowable value
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-set-adjustment" role="function"/>phat_slider_button_set_adjustment ()</title>
+<indexterm><primary>phat_slider_button_set_adjustment</primary></indexterm><programlisting><link linkend="void">void</link>        phat_slider_button_set_adjustment
+                                            (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="GtkAdjustment">GtkAdjustment</link> *adjustment);</programlisting>
+<para>
+Sets the adjustment used by <parameter>button</parameter>.  If <parameter>adjustment</parameter> is <link linkend="NULL:CAPS"><literal>NULL</literal></link>, a
+new adjustment with a value of zero and a range of [-1.0, 1.0] will
+be created.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>adjustment</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="GtkAdjustment"><type>GtkAdjustment</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-get-adjustment" role="function"/>phat_slider_button_get_adjustment ()</title>
+<indexterm><primary>phat_slider_button_get_adjustment</primary></indexterm><programlisting><link linkend="GtkAdjustment">GtkAdjustment</link>* phat_slider_button_get_adjustment
+                                            (<link linkend="PhatSliderButton">PhatSliderButton</link> *button);</programlisting>
+<para>
+Retrives the current adjustment in use by <parameter>button</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> <parameter>button</parameter>'s current <link linkend="GtkAdjustment"><type>GtkAdjustment</type></link>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-set-increment" role="function"/>phat_slider_button_set_increment ()</title>
+<indexterm><primary>phat_slider_button_set_increment</primary></indexterm><programlisting><link linkend="void">void</link>        phat_slider_button_set_increment
+                                            (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="double">double</link> step,
+                                             <link linkend="double">double</link> page);</programlisting>
+<para>
+Sets the increments the button should use.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>step</parameter>&nbsp;:</term>
+<listitem><simpara> step increment value
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>page</parameter>&nbsp;:</term>
+<listitem><simpara> page increment value
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-get-increment" role="function"/>phat_slider_button_get_increment ()</title>
+<indexterm><primary>phat_slider_button_get_increment</primary></indexterm><programlisting><link linkend="void">void</link>        phat_slider_button_get_increment
+                                            (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="double">double</link> *step,
+                                             <link linkend="double">double</link> *page);</programlisting>
+<para>
+Places the button's increment values into <parameter>step</parameter> and <parameter>page</parameter>.  Either
+variable may be set to <link linkend="NULL:CAPS"><literal>NULL</literal></link> if you are not interested in its
+value.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>step</parameter>&nbsp;:</term>
+<listitem><simpara> retrieves step increment value
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>page</parameter>&nbsp;:</term>
+<listitem><simpara> retrieves page increment value
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-set-format" role="function"/>phat_slider_button_set_format ()</title>
+<indexterm><primary>phat_slider_button_set_format</primary></indexterm><programlisting><link linkend="void">void</link>        phat_slider_button_set_format   (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="int">int</link> digits,
+                                             const <link linkend="char">char</link> *prefix,
+                                             const <link linkend="char">char</link> *postfix);</programlisting>
+<para>
+Sets the way <parameter>button</parameter> renders it's label.  If the first character in
+either <parameter>prefix</parameter> or <parameter>postfix</parameter> is '\0' the corresponding parameter will
+be unset.  If you don't want to adjust <parameter>digits</parameter>, set it to a
+negative value.  If you don't want to adjust <parameter>prefix</parameter> and/or
+<parameter>postfix</parameter>, set them to <link linkend="NULL:CAPS"><literal>NULL</literal></link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>digits</parameter>&nbsp;:</term>
+<listitem><simpara> number of decimal digits to display
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>prefix</parameter>&nbsp;:</term>
+<listitem><simpara> text to prepend to number
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>postfix</parameter>&nbsp;:</term>
+<listitem><simpara> text to append to number
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-get-format" role="function"/>phat_slider_button_get_format ()</title>
+<indexterm><primary>phat_slider_button_get_format</primary></indexterm><programlisting><link linkend="void">void</link>        phat_slider_button_get_format   (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="int">int</link> *digits,
+                                             <link linkend="char">char</link> **prefix,
+                                             <link linkend="char">char</link> **postfix);</programlisting>
+<para>
+Retrieves the information <parameter>button</parameter> uses to create its label.  The
+value returned will point to the button's local copy, so don't
+write to it.  Set the pointers for any value you aren't interested
+in to <link linkend="NULL:CAPS"><literal>NULL</literal></link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>digits</parameter>&nbsp;:</term>
+<listitem><simpara> retrieves the number of decimal digits to display
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>prefix</parameter>&nbsp;:</term>
+<listitem><simpara> retrieves text prepended to number
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>postfix</parameter>&nbsp;:</term>
+<listitem><simpara> retrieves text appended to number
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-set-threshold" role="function"/>phat_slider_button_set_threshold ()</title>
+<indexterm><primary>phat_slider_button_set_threshold</primary></indexterm><programlisting><link linkend="void">void</link>        phat_slider_button_set_threshold
+                                            (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                             <link linkend="guint">guint</link> threshold);</programlisting>
+<para>
+Sets the threshold for <parameter>button</parameter>.  The threshold is how far the user
+has to move the mouse to effect a change when sliding.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>threshold</parameter>&nbsp;:</term>
+<listitem><simpara> an unsigned int &gt;= 1
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-slider-button-get-threshold" role="function"/>phat_slider_button_get_threshold ()</title>
+<indexterm><primary>phat_slider_button_get_threshold</primary></indexterm><programlisting><link linkend="int">int</link>         phat_slider_button_get_threshold
+                                            (<link linkend="PhatSliderButton">PhatSliderButton</link> *button);</programlisting>
+<para>
+Retrieves the threshold for <parameter>button</parameter></para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatSliderButton"><type>PhatSliderButton</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> the threshold for <parameter>button</parameter>, or -1 if <parameter>button</parameter> is invalid
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+<refsect1 role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2><title><anchor id="PhatSliderButton-changed"/>The &quot;changed&quot; signal</title>
+<indexterm><primary>PhatSliderButton::changed</primary></indexterm><programlisting><link linkend="void">void</link>        user_function                  (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                            <link linkend="gpointer">gpointer</link>          user_data)      : Run first / Action</programlisting>
+<para>
+The "changed" signal is emitted when any parameter of the
+slider's adjustment changes, except for the <link linkend="value"><literal>value</literal></link> parameter.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> the object on which the signal was emitted
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2><title><anchor id="PhatSliderButton-value-changed"/>The &quot;value-changed&quot; signal</title>
+<indexterm><primary>PhatSliderButton::value-changed</primary></indexterm><programlisting><link linkend="void">void</link>        user_function                  (<link linkend="PhatSliderButton">PhatSliderButton</link> *button,
+                                            <link linkend="gpointer">gpointer</link>          user_data)      : Run first / Action</programlisting>
+<para>
+The "value-changed" signal is emitted when the value of the
+button's adjustment changes.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>button</parameter>&nbsp;:</term>
+<listitem><simpara> the object on which the signal was emitted
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+
+
+</refentry>

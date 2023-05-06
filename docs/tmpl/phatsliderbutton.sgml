@@ -1,0 +1,202 @@
+<!-- ##### SECTION Title ##### -->
+PhatSliderButton
+
+<!-- ##### SECTION Short_Description ##### -->
+
+retrieve an integer or floating-point number from the user
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+A #PhatSliderButton can be used in place of a #GtkSpinButton.  It's a
+better choice than a #PhatFanSlider when you want the user to clearly
+see the value they are setting, or want to constrain their selection
+to a set of discrete values (fansliders are "continuous").
+</para>
+
+<para>
+Sliderbuttons allow the user to change the value by grabbing the
+widget and dragging.  They can also make small "one off" adjustments
+via the arrow buttons, or click the button to enter the value
+directly.  They have a slightly higher learning curve than standard
+spinbuttons, but they offer much more efficiency to the user.
+</para>
+
+<para>
+The way the current value of a sliderbutton is displayed is controlled
+with a printf style format specifier supplied at widget creation.
+Since sliderbuttons operate with doubles, the specifier should be in
+the form of "%%f" or any of the other double compatible printf escapes.
+You should resist the urge to embed other information in the format
+specifier, since that extra text will also wind up in the entry when
+the user clicks the button.  Instead, use
+phat_slider_button_set_format() to set prefix and/or postfix text.
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT PhatSliderButton ##### -->
+<para>
+The #PhatSliderButton-struct struct contains private data only, and
+should be accessed using the functions below.
+</para>
+
+
+<!-- ##### SIGNAL PhatSliderButton::changed ##### -->
+<para>
+
+</para>
+
+@phatsliderbutton: the object which received the signal.
+
+<!-- ##### SIGNAL PhatSliderButton::value-changed ##### -->
+<para>
+
+</para>
+
+@phatsliderbutton: the object which received the signal.
+
+<!-- ##### FUNCTION phat_slider_button_new ##### -->
+<para>
+
+</para>
+
+@adjustment: 
+@digits: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_slider_button_new_with_range ##### -->
+<para>
+
+</para>
+
+@value: 
+@lower: 
+@upper: 
+@step: 
+@digits: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_slider_button_set_value ##### -->
+<para>
+
+</para>
+
+@button: 
+@value: 
+
+
+<!-- ##### FUNCTION phat_slider_button_get_value ##### -->
+<para>
+
+</para>
+
+@button: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_slider_button_set_range ##### -->
+<para>
+
+</para>
+
+@button: 
+@lower: 
+@upper: 
+
+
+<!-- ##### FUNCTION phat_slider_button_get_range ##### -->
+<para>
+
+</para>
+
+@button: 
+@lower: 
+@upper: 
+
+
+<!-- ##### FUNCTION phat_slider_button_set_adjustment ##### -->
+<para>
+
+</para>
+
+@button: 
+@adjustment: 
+
+
+<!-- ##### FUNCTION phat_slider_button_get_adjustment ##### -->
+<para>
+
+</para>
+
+@button: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_slider_button_set_increment ##### -->
+<para>
+
+</para>
+
+@button: 
+@step: 
+@page: 
+
+
+<!-- ##### FUNCTION phat_slider_button_get_increment ##### -->
+<para>
+
+</para>
+
+@button: 
+@step: 
+@page: 
+
+
+<!-- ##### FUNCTION phat_slider_button_set_format ##### -->
+<para>
+
+</para>
+
+@button: 
+@digits: 
+@prefix: 
+@postfix: 
+
+
+<!-- ##### FUNCTION phat_slider_button_get_format ##### -->
+<para>
+
+</para>
+
+@button: 
+@digits: 
+@prefix: 
+@postfix: 
+
+
+<!-- ##### FUNCTION phat_slider_button_set_threshold ##### -->
+<para>
+
+</para>
+
+@button: 
+@threshold: 
+
+
+<!-- ##### FUNCTION phat_slider_button_get_threshold ##### -->
+<para>
+
+</para>
+
+@button: 
+@Returns: 
+
+

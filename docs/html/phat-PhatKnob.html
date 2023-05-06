@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>PhatKnob</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.70.1">
+<link rel="start" href="index.html" title="PHAT Reference Manual">
+<link rel="up" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+<link rel="prev" href="PhatVKeyboard.html" title="PhatVKeyboard">
+<link rel="next" href="PhatVFanSlider.html" title="PhatVFanSlider">
+<meta name="generator" content="GTK-Doc V1.7 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="phat.html" title="Part&#160;I.&#160;PHAT Overview">
+<link rel="part" href="phatwidgets.html" title="Part&#160;II.&#160;PHAT Widgets">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="PhatVKeyboard.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="phatwidgets.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">PHAT Reference Manual</th>
+<td><a accesskey="n" href="PhatVFanSlider.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id319177" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id347248" class="shortcut">Description</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="phat-PhatKnob"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id319177"></a><span class="refentrytitle">PhatKnob</span>
+</h2>
+<p>PhatKnob &#8212; </p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+            <a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a>;
+<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  <a href="phat-PhatKnob.html#phat-knob-new">phat_knob_new</a>                   (<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment);
+<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  <a href="phat-PhatKnob.html#phat-knob-new-with-range">phat_knob_new_with_range</a>        (double value,
+                                             double lower,
+                                             double upper,
+                                             double step);
+<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* <a href="phat-PhatKnob.html#phat-knob-get-adjustment">phat_knob_get_adjustment</a>     (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob);
+double      <a href="phat-PhatKnob.html#phat-knob-get-value">phat_knob_get_value</a>             (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob);
+void        <a href="phat-PhatKnob.html#phat-knob-set-value">phat_knob_set_value</a>             (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob,
+                                             double value);
+void        <a href="phat-PhatKnob.html#phat-knob-set-range">phat_knob_set_range</a>             (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob,
+                                             double lower,
+                                             double upper);
+void        <a href="phat-PhatKnob.html#phat-knob-set-update-policy">phat_knob_set_update_policy</a>     (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob,
+                                             <a
+href="../gtk/gtk-Standard-Enumerations.html#GtkUpdateType"
+>GtkUpdateType</a> policy);
+void        <a href="phat-PhatKnob.html#phat-knob-set-adjustment">phat_knob_set_adjustment</a>        (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob,
+                                             <a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment);
+void        <a href="phat-PhatKnob.html#phat-knob-set-log">phat_knob_set_log</a>               (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);
+<a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    <a href="phat-PhatKnob.html#phat-knob-is-log">phat_knob_is_log</a>                (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id347248"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id347264"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id347275"></a><h3>
+<a name="PhatKnob"></a>PhatKnob</h3>
+<a class="indexterm" name="id347287"></a><pre class="programlisting">typedef struct {
+    GtkWidget widget;
+    /* The adjustment object that stores the data for this knob */
+    GtkAdjustment *adjustment;
+    GtkAdjustment* adjustment_prv;
+
+
+    /* update policy (GTK_UPDATE_[CONTINUOUS/DELAYED/DISCONTINUOUS]) */
+    guint policy : 2;
+    gboolean is_log;
+
+    /* State of widget (to do with user interaction) */
+    guint8 state;
+    gint saved_x, saved_y;
+
+    /* ID of update timer, or 0 if none */
+    guint32 timer;
+
+    /* Pixmap for knob */
+    GdkPixbuf *pixbuf;
+    GdkBitmap *mask;
+    GdkGC *mask_gc;
+    GdkGC *red_gc;
+
+    /* Old values from adjustment stored so we know when something changes */
+    gfloat old_value;
+    gfloat old_lower;
+    gfloat old_upper;
+} PhatKnob;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id340768"></a><h3>
+<a name="phat-knob-new"></a>phat_knob_new ()</h3>
+<a class="indexterm" name="id332185"></a><pre class="programlisting"><a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  phat_knob_new                   (<a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>adjustment</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id322322"></a><h3>
+<a name="phat-knob-new-with-range"></a>phat_knob_new_with_range ()</h3>
+<a class="indexterm" name="id322334"></a><pre class="programlisting"><a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*  phat_knob_new_with_range        (double value,
+                                             double lower,
+                                             double upper,
+                                             double step);</pre>
+<p>
+Creates a new <a href="phat-PhatKnob.html#PhatKnob"><span class="type">PhatKnob</span></a>.  The knob will create a new
+<a
+href="../gtk/GtkAdjustment.html"
+><span class="type">GtkAdjustment</span></a> from <em class="parameter"><code>value</code></em>, <em class="parameter"><code>lower</code></em>, <em class="parameter"><code>upper</code></em>, and <em class="parameter"><code>step</code></em>.  If these
+parameters represent a bogus configuration, the program will
+terminate.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>value</code></em>&#160;:</span></td>
+<td> the initial value the new knob should have
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>lower</code></em>&#160;:</span></td>
+<td> the lowest value the new knob will allow
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>upper</code></em>&#160;:</span></td>
+<td> the highest value the new knob will allow
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>step</code></em>&#160;:</span></td>
+<td> increment added or subtracted when turning
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> a newly created <a href="phat-PhatKnob.html#PhatKnob"><span class="type">PhatKnob</span></a>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id322498"></a><h3>
+<a name="phat-knob-get-adjustment"></a>phat_knob_get_adjustment ()</h3>
+<a class="indexterm" name="id322510"></a><pre class="programlisting"><a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a>* phat_knob_get_adjustment     (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>knob</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id358357"></a><h3>
+<a name="phat-knob-get-value"></a>phat_knob_get_value ()</h3>
+<a class="indexterm" name="id358367"></a><pre class="programlisting">double      phat_knob_get_value             (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob);</pre>
+<p>
+Retrieves the current value of the knob.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>knob</code></em>&#160;:</span></td>
+<td> a <a href="phat-PhatKnob.html#PhatKnob"><span class="type">PhatKnob</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td> current value of the knob
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id358426"></a><h3>
+<a name="phat-knob-set-value"></a>phat_knob_set_value ()</h3>
+<a class="indexterm" name="id358436"></a><pre class="programlisting">void        phat_knob_set_value             (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob,
+                                             double value);</pre>
+<p>
+Sets the current value of the knob.  If the value is outside the
+range of values allowed by <em class="parameter"><code>knob</code></em>, it will be clamped.  The knob
+emits the "value-changed" signal if the value changes.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>knob</code></em>&#160;:</span></td>
+<td> a <a href="phat-PhatKnob.html#PhatKnob"><span class="type">PhatKnob</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>value</code></em>&#160;:</span></td>
+<td> a new value for the knob
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id358510"></a><h3>
+<a name="phat-knob-set-range"></a>phat_knob_set_range ()</h3>
+<a class="indexterm" name="id358520"></a><pre class="programlisting">void        phat_knob_set_range             (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob,
+                                             double lower,
+                                             double upper);</pre>
+<p>
+Sets the range of allowable values for the knob, and clamps the
+knob's current value to be between <em class="parameter"><code>lower</code></em> and <em class="parameter"><code>upper</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>knob</code></em>&#160;:</span></td>
+<td> a <a href="phat-PhatKnob.html#PhatKnob"><span class="type">PhatKnob</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>lower</code></em>&#160;:</span></td>
+<td> lowest allowable value
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>upper</code></em>&#160;:</span></td>
+<td> highest allowable value
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id358616"></a><h3>
+<a name="phat-knob-set-update-policy"></a>phat_knob_set_update_policy ()</h3>
+<a class="indexterm" name="id358627"></a><pre class="programlisting">void        phat_knob_set_update_policy     (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob,
+                                             <a
+href="../gtk/gtk-Standard-Enumerations.html#GtkUpdateType"
+>GtkUpdateType</a> policy);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>knob</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>policy</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id358684"></a><h3>
+<a name="phat-knob-set-adjustment"></a>phat_knob_set_adjustment ()</h3>
+<a class="indexterm" name="id358695"></a><pre class="programlisting">void        phat_knob_set_adjustment        (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob,
+                                             <a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *adjustment);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>knob</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>adjustment</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id358752"></a><h3>
+<a name="phat-knob-set-log"></a>phat_knob_set_log ()</h3>
+<a class="indexterm" name="id358763"></a><pre class="programlisting">void        phat_knob_set_log               (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob,
+                                             <a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> is_log);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>knob</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>is_log</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id358820"></a><h3>
+<a name="phat-knob-is-log"></a>phat_knob_is_log ()</h3>
+<a class="indexterm" name="id358831"></a><pre class="programlisting"><a
+href="../glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>    phat_knob_is_log                (<a href="phat-PhatKnob.html#PhatKnob">PhatKnob</a> *knob);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td>
+<span class="term"><em class="parameter"><code>knob</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

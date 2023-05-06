@@ -1,0 +1,10 @@
+#include <phat/phat.h>
+
+phat_fan_slider_get_type
+phat_vfan_slider_get_type
+phat_hfan_slider_get_type
+phat_slider_button_get_type
+phat_keyboard_get_type
+phat_vkeyboard_get_type
+phat_hkeyboard_get_type
+

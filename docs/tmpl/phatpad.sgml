@@ -1,0 +1,210 @@
+<!-- ##### SECTION Title ##### -->
+PhatPad
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT PhatPad ##### -->
+<para>
+
+</para>
+
+@parent: 
+@pixmap: 
+@pressure: 
+@p_is_log: 
+@xtilt: 
+@xt_is_log: 
+@ytilt: 
+@yt_is_log: 
+@x: 
+@x_is_log: 
+@y: 
+@y_is_log: 
+
+<!-- ##### FUNCTION phat_pad_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_pad_get_ytilt ##### -->
+<para>
+
+</para>
+
+@pad: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_pad_get_xtilt ##### -->
+<para>
+
+</para>
+
+@pad: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_pad_get_pressure ##### -->
+<para>
+
+</para>
+
+@pad: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_pad_get_y ##### -->
+<para>
+
+</para>
+
+@pad: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_pad_get_x ##### -->
+<para>
+
+</para>
+
+@pad: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_pad_set_x_range ##### -->
+<para>
+
+</para>
+
+@pad: 
+@min: 
+@max: 
+
+
+<!-- ##### FUNCTION phat_pad_set_y_range ##### -->
+<para>
+
+</para>
+
+@pad: 
+@min: 
+@max: 
+
+
+<!-- ##### FUNCTION phat_pad_set_pressure_range ##### -->
+<para>
+
+</para>
+
+@pad: 
+@min: 
+@max: 
+
+
+<!-- ##### FUNCTION phat_pad_set_x_log ##### -->
+<para>
+
+</para>
+
+@pad: 
+@is_log: 
+
+
+<!-- ##### FUNCTION phat_pad_set_y_log ##### -->
+<para>
+
+</para>
+
+@pad: 
+@is_log: 
+
+
+<!-- ##### FUNCTION phat_pad_set_xtilt_log ##### -->
+<para>
+
+</para>
+
+@pad: 
+@is_log: 
+
+
+<!-- ##### FUNCTION phat_pad_set_ytilt_log ##### -->
+<para>
+
+</para>
+
+@pad: 
+@is_log: 
+
+
+<!-- ##### FUNCTION phat_pad_set_pressure_log ##### -->
+<para>
+
+</para>
+
+@pad: 
+@is_log: 
+
+
+<!-- ##### FUNCTION phat_pad_x_is_log ##### -->
+<para>
+
+</para>
+
+@pad: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_pad_y_is_log ##### -->
+<para>
+
+</para>
+
+@pad: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_pad_xtilt_is_log ##### -->
+<para>
+
+</para>
+
+@pad: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_pad_ytilt_is_log ##### -->
+<para>
+
+</para>
+
+@pad: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_pad_pressure_is_log ##### -->
+<para>
+
+</para>
+
+@pad: 
+@Returns: 
+
+

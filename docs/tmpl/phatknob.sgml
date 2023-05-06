@@ -1,0 +1,135 @@
+<!-- ##### SECTION Title ##### -->
+PhatKnob
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT PhatKnob ##### -->
+<para>
+
+</para>
+
+@widget: 
+@adjustment: 
+@adjustment_prv: 
+@policy: 
+@is_log: 
+@state: 
+@saved_x: 
+@saved_y: 
+@timer: 
+@pixbuf: 
+@mask: 
+@mask_gc: 
+@red_gc: 
+@old_value: 
+@old_lower: 
+@old_upper: 
+
+<!-- ##### FUNCTION phat_knob_new ##### -->
+<para>
+
+</para>
+
+@adjustment: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_knob_new_with_range ##### -->
+<para>
+
+</para>
+
+@value: 
+@lower: 
+@upper: 
+@step: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_knob_get_adjustment ##### -->
+<para>
+
+</para>
+
+@knob: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_knob_get_value ##### -->
+<para>
+
+</para>
+
+@knob: 
+@Returns: 
+
+
+<!-- ##### FUNCTION phat_knob_set_value ##### -->
+<para>
+
+</para>
+
+@knob: 
+@value: 
+
+
+<!-- ##### FUNCTION phat_knob_set_range ##### -->
+<para>
+
+</para>
+
+@knob: 
+@lower: 
+@upper: 
+
+
+<!-- ##### FUNCTION phat_knob_set_update_policy ##### -->
+<para>
+
+</para>
+
+@knob: 
+@policy: 
+
+
+<!-- ##### FUNCTION phat_knob_set_adjustment ##### -->
+<para>
+
+</para>
+
+@knob: 
+@adjustment: 
+
+
+<!-- ##### FUNCTION phat_knob_set_log ##### -->
+<para>
+
+</para>
+
+@knob: 
+@is_log: 
+
+
+<!-- ##### FUNCTION phat_knob_is_log ##### -->
+<para>
+
+</para>
+
+@knob: 
+@Returns: 
+
+

@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="phat-PhatPad">
+<refmeta>
+<refentrytitle role="top_of_page">PhatPad</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>PHAT Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>PhatPad</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+
+
+            <link linkend="PhatPad">PhatPad</link>;
+<link linkend="GtkWidget">GtkWidget</link>*  <link linkend="phat-pad-new">phat_pad_new</link>                    ();
+<link linkend="GtkAdjustment">GtkAdjustment</link>* <link linkend="phat-pad-get-ytilt">phat_pad_get_ytilt</link>           (<link linkend="PhatPad">PhatPad</link> *pad);
+<link linkend="GtkAdjustment">GtkAdjustment</link>* <link linkend="phat-pad-get-xtilt">phat_pad_get_xtilt</link>           (<link linkend="PhatPad">PhatPad</link> *pad);
+<link linkend="GtkAdjustment">GtkAdjustment</link>* <link linkend="phat-pad-get-pressure">phat_pad_get_pressure</link>        (<link linkend="PhatPad">PhatPad</link> *pad);
+<link linkend="GtkAdjustment">GtkAdjustment</link>* <link linkend="phat-pad-get-y">phat_pad_get_y</link>               (<link linkend="PhatPad">PhatPad</link> *pad);
+<link linkend="GtkAdjustment">GtkAdjustment</link>* <link linkend="phat-pad-get-x">phat_pad_get_x</link>               (<link linkend="PhatPad">PhatPad</link> *pad);
+<link linkend="void">void</link>        <link linkend="phat-pad-set-x-range">phat_pad_set_x_range</link>            (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gdouble">gdouble</link> min,
+                                             <link linkend="gdouble">gdouble</link> max);
+<link linkend="void">void</link>        <link linkend="phat-pad-set-y-range">phat_pad_set_y_range</link>            (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gdouble">gdouble</link> min,
+                                             <link linkend="gdouble">gdouble</link> max);
+<link linkend="void">void</link>        <link linkend="phat-pad-set-pressure-range">phat_pad_set_pressure_range</link>     (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gdouble">gdouble</link> min,
+                                             <link linkend="gdouble">gdouble</link> max);
+<link linkend="void">void</link>        <link linkend="phat-pad-set-x-log">phat_pad_set_x_log</link>              (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gboolean">gboolean</link> is_log);
+<link linkend="void">void</link>        <link linkend="phat-pad-set-y-log">phat_pad_set_y_log</link>              (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gboolean">gboolean</link> is_log);
+<link linkend="void">void</link>        <link linkend="phat-pad-set-xtilt-log">phat_pad_set_xtilt_log</link>          (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gboolean">gboolean</link> is_log);
+<link linkend="void">void</link>        <link linkend="phat-pad-set-ytilt-log">phat_pad_set_ytilt_log</link>          (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gboolean">gboolean</link> is_log);
+<link linkend="void">void</link>        <link linkend="phat-pad-set-pressure-log">phat_pad_set_pressure_log</link>       (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gboolean">gboolean</link> is_log);
+<link linkend="gboolean">gboolean</link>    <link linkend="phat-pad-x-is-log">phat_pad_x_is_log</link>               (<link linkend="PhatPad">PhatPad</link> *pad);
+<link linkend="gboolean">gboolean</link>    <link linkend="phat-pad-y-is-log">phat_pad_y_is_log</link>               (<link linkend="PhatPad">PhatPad</link> *pad);
+<link linkend="gboolean">gboolean</link>    <link linkend="phat-pad-xtilt-is-log">phat_pad_xtilt_is_log</link>           (<link linkend="PhatPad">PhatPad</link> *pad);
+<link linkend="gboolean">gboolean</link>    <link linkend="phat-pad-ytilt-is-log">phat_pad_ytilt_is_log</link>           (<link linkend="PhatPad">PhatPad</link> *pad);
+<link linkend="gboolean">gboolean</link>    <link linkend="phat-pad-pressure-is-log">phat_pad_pressure_is_log</link>        (<link linkend="PhatPad">PhatPad</link> *pad);
+
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="PhatPad" role="struct"/>PhatPad</title>
+<indexterm><primary>PhatPad</primary></indexterm><programlisting>typedef struct {
+    GtkDrawingArea parent; 
+    GdkPixmap* pixmap;
+    GtkAdjustment* pressure;
+    gboolean p_is_log;
+    GtkAdjustment* xtilt;
+    gboolean xt_is_log;
+    GtkAdjustment* ytilt;
+    gboolean yt_is_log;
+    GtkAdjustment* x;
+    gboolean x_is_log;
+    GtkAdjustment* y;
+    gboolean y_is_log;
+} PhatPad;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-new" role="function"/>phat_pad_new ()</title>
+<indexterm><primary>phat_pad_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*  phat_pad_new                    ();</programlisting>
+<para>
+Creates a new <link linkend="PhatPad"><type>PhatPad</type></link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> a newly created <link linkend="PhatPad"><type>PhatPad</type></link>
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-get-ytilt" role="function"/>phat_pad_get_ytilt ()</title>
+<indexterm><primary>phat_pad_get_ytilt</primary></indexterm><programlisting><link linkend="GtkAdjustment">GtkAdjustment</link>* phat_pad_get_ytilt           (<link linkend="PhatPad">PhatPad</link> *pad);</programlisting>
+<para>
+Retrieves the current ytilt value of the pad.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatPad"><type>PhatPad</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> current ytilt value.
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-get-xtilt" role="function"/>phat_pad_get_xtilt ()</title>
+<indexterm><primary>phat_pad_get_xtilt</primary></indexterm><programlisting><link linkend="GtkAdjustment">GtkAdjustment</link>* phat_pad_get_xtilt           (<link linkend="PhatPad">PhatPad</link> *pad);</programlisting>
+<para>
+Retrieves the current xtilt value of the pad.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatPad"><type>PhatPad</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> current xtilt value.
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-get-pressure" role="function"/>phat_pad_get_pressure ()</title>
+<indexterm><primary>phat_pad_get_pressure</primary></indexterm><programlisting><link linkend="GtkAdjustment">GtkAdjustment</link>* phat_pad_get_pressure        (<link linkend="PhatPad">PhatPad</link> *pad);</programlisting>
+<para>
+Retrieves the current pressure value of the pad.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatPad"><type>PhatPad</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> current pressure value.
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-get-y" role="function"/>phat_pad_get_y ()</title>
+<indexterm><primary>phat_pad_get_y</primary></indexterm><programlisting><link linkend="GtkAdjustment">GtkAdjustment</link>* phat_pad_get_y               (<link linkend="PhatPad">PhatPad</link> *pad);</programlisting>
+<para>
+Retrieves the current y value of the pad.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatPad"><type>PhatPad</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> current y value.
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-get-x" role="function"/>phat_pad_get_x ()</title>
+<indexterm><primary>phat_pad_get_x</primary></indexterm><programlisting><link linkend="GtkAdjustment">GtkAdjustment</link>* phat_pad_get_x               (<link linkend="PhatPad">PhatPad</link> *pad);</programlisting>
+<para>
+Retrieves the current x value of the pad.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatPad"><type>PhatPad</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara> current x value.
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-set-x-range" role="function"/>phat_pad_set_x_range ()</title>
+<indexterm><primary>phat_pad_set_x_range</primary></indexterm><programlisting><link linkend="void">void</link>        phat_pad_set_x_range            (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gdouble">gdouble</link> min,
+                                             <link linkend="gdouble">gdouble</link> max);</programlisting>
+<para>
+Sets the x range of the pad.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara> a <link linkend="PhatPad"><type>PhatPad</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>min</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>max</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-set-y-range" role="function"/>phat_pad_set_y_range ()</title>
+<indexterm><primary>phat_pad_set_y_range</primary></indexterm><programlisting><link linkend="void">void</link>        phat_pad_set_y_range            (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gdouble">gdouble</link> min,
+                                             <link linkend="gdouble">gdouble</link> max);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>min</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>max</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-set-pressure-range" role="function"/>phat_pad_set_pressure_range ()</title>
+<indexterm><primary>phat_pad_set_pressure_range</primary></indexterm><programlisting><link linkend="void">void</link>        phat_pad_set_pressure_range     (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gdouble">gdouble</link> min,
+                                             <link linkend="gdouble">gdouble</link> max);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>min</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>max</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-set-x-log" role="function"/>phat_pad_set_x_log ()</title>
+<indexterm><primary>phat_pad_set_x_log</primary></indexterm><programlisting><link linkend="void">void</link>        phat_pad_set_x_log              (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gboolean">gboolean</link> is_log);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>is_log</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-set-y-log" role="function"/>phat_pad_set_y_log ()</title>
+<indexterm><primary>phat_pad_set_y_log</primary></indexterm><programlisting><link linkend="void">void</link>        phat_pad_set_y_log              (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gboolean">gboolean</link> is_log);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>is_log</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-set-xtilt-log" role="function"/>phat_pad_set_xtilt_log ()</title>
+<indexterm><primary>phat_pad_set_xtilt_log</primary></indexterm><programlisting><link linkend="void">void</link>        phat_pad_set_xtilt_log          (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gboolean">gboolean</link> is_log);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>is_log</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-set-ytilt-log" role="function"/>phat_pad_set_ytilt_log ()</title>
+<indexterm><primary>phat_pad_set_ytilt_log</primary></indexterm><programlisting><link linkend="void">void</link>        phat_pad_set_ytilt_log          (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gboolean">gboolean</link> is_log);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>is_log</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-set-pressure-log" role="function"/>phat_pad_set_pressure_log ()</title>
+<indexterm><primary>phat_pad_set_pressure_log</primary></indexterm><programlisting><link linkend="void">void</link>        phat_pad_set_pressure_log       (<link linkend="PhatPad">PhatPad</link> *pad,
+                                             <link linkend="gboolean">gboolean</link> is_log);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>is_log</parameter>&nbsp;:</term>
+<listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-x-is-log" role="function"/>phat_pad_x_is_log ()</title>
+<indexterm><primary>phat_pad_x_is_log</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>    phat_pad_x_is_log               (<link linkend="PhatPad">PhatPad</link> *pad);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-y-is-log" role="function"/>phat_pad_y_is_log ()</title>
+<indexterm><primary>phat_pad_y_is_log</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>    phat_pad_y_is_log               (<link linkend="PhatPad">PhatPad</link> *pad);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-xtilt-is-log" role="function"/>phat_pad_xtilt_is_log ()</title>
+<indexterm><primary>phat_pad_xtilt_is_log</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>    phat_pad_xtilt_is_log           (<link linkend="PhatPad">PhatPad</link> *pad);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-ytilt-is-log" role="function"/>phat_pad_ytilt_is_log ()</title>
+<indexterm><primary>phat_pad_ytilt_is_log</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>    phat_pad_ytilt_is_log           (<link linkend="PhatPad">PhatPad</link> *pad);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="phat-pad-pressure-is-log" role="function"/>phat_pad_pressure_is_log ()</title>
+<indexterm><primary>phat_pad_pressure_is_log</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>    phat_pad_pressure_is_log        (<link linkend="PhatPad">PhatPad</link> *pad);</programlisting>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>pad</parameter>&nbsp;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&nbsp;:</term><listitem><simpara>
+
+
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

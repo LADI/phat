@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -x
+
+gtkdocize || exit 1
+libtoolize -c -f --automake
+aclocal 
+autoheader
+autoconf -f
+automake -a -c
+
