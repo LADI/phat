@@ -49,7 +49,7 @@ GTK_DOC_CHECK(1.0)
 PKG_CHECK_MODULES(MISC, libgnomecanvas-2.0)
 
 # set compilation flags
-CFLAGS="$CFLAGS $GTK_CFLAGS $MISC_CFLAGS -Wall -Werror"
+CFLAGS="$CFLAGS $GTK_CFLAGS $MISC_CFLAGS"
 LIBS="$LIBS $GTK_LIBS $MISC_LIBS"
 
 # print build summary
